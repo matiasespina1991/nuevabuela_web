@@ -1,3 +1,32 @@
+@font-face {
+  font-family: "Coco Gothic";
+  src: url("/fonts/coco_gothic/CocoGothic_trial.ttf");
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Coco Gothic Light";
+  src: url("/fonts/coco_gothic/CocoGothic-Light_trial.ttf");
+  font-style: medium;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Coco Gothic Bold";
+  src: url("/fonts/coco_gothic/CocoGothic-Bold_trial.ttf");
+  font-style: medium;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Larken Bold";
+  src: url("/fonts/larken-bold/larken-bold.ttf");
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
+
 html,
 body {
   padding: 0;
@@ -11,56 +40,165 @@ a {
   text-decoration: none;
 }
 
+p {
+  text-align: center;
+}
+
 * {
   box-sizing: border-box;
 }
 
-.loading-screen-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  opacity: 0;
-  justify-content: center;
-  border: 0.1rem solid black;
-}
-
-.loading-logo-container {
-  position: absolute;
+.navheader-wrapper {
   display: flex;
   justify-content: center;
-  height: 100vh;
-  bottom: 9vh;
 }
 
-.loading-welcome-wrapper {
+.navheader-container {
+  width: 60%;
+  border-bottom: 0.15rem solid #e4ae8b;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  padding-bottom: 0.5rem;
 }
 
-.loading-plus-wrapper {
-  width: 100%;
-  position: absolute;
+.navheader-container nav ul {
+  list-style-type: none;
+  padding: 0;
   display: flex;
-  align-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.nav-container {
+  width: 45rem;
+}
+.navheader-container a {
+  font-family: "Coco Gothic";
+  letter-spacing: 0.7px;
+  font-size: 0.9rem;
+}
+.nuevabuela-logo {
+  display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.nuevabuela-logo img {
+  cursor: pointer;
+}
+
+.nav-container li {
+  padding: 0px 0.1rem;
+  transition: 0.1s;
 }
 
 .main-section-container {
   min-height: 100vh;
 }
 
-.navheader-container {
-  border: 1px solid black;
+.home-our-brand-featured-images-container,
+.home-about-us-featured-images-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+
+.home-our-brand-featured-images-container > div {
+  margin: 0.2rem;
+}
+
+.home-our-brand-featured-image-left,
+.home-our-brand-featured-image-right {
+  background: #e4ae8b;
+  width: 380px;
+  height: 380px;
+}
+
+.home-our-brand-featured-image-left {
+  background: url(/images/home-featured-left.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home-our-brand-featured-image-right {
+  background: url(/images/home-featured-right.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.our-brand,
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-brand p,
+.about-us p {
+  max-width: 32rem;
+  line-height: 1.8rem;
+  font-size: 0.9rem;
+}
+
+.separator {
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.contact-us-footer {
+  text-align: center;
+}
+
+.contact-us-footer p {
+  font-size: 1.8rem;
+  color: white;
+  padding-top: 1.9rem;
+  font-family: "Coco Gothic Light";
+}
+
+.contact-us-footer strong {
+  font-size: 1.8rem;
+  color: white;
+  font-family: "Coco Gothic Bold";
+}
+
+.footer-social-icons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social-icons-container > div {
+  padding: 0 1rem;
+  filter: invert(1);
+}
+
+.footer-social-icons-container img {
+  background: white;
+  border-radius: 7rem;
+  cursor: pointer;
+}
+
+.footer-social-icons-container > div > span {
+  border: 4px solid black !important;
+  border-radius: 6rem;
 }
 
 main {
-  border: 0.1rem solid yellow;
   min-height: calc(100vh - 3rem);
+  padding: 4rem 14rem;
+  padding-bottom: 5rem;
+}
+
+h1 {
+  font-family: "Larken Bold";
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 0.2rem;
 }
 
 footer {
-  border: 0.1rem solid red;
+  background: #e4ae8b;
+  min-height: 14rem;
 }

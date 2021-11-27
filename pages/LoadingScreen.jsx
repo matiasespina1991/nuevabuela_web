@@ -14,7 +14,7 @@ export default function LoadingScreen({DOMisLoaded}) {
 
     useEffect(() => {
         document.body.style.overflow = DOMfinishedLoading ? "auto" : "hidden";
-    })
+    }, [DOMfinishedLoading])
 
     useEffect(() => {
         gsap.to(loadingScreenContainer.current, { 
@@ -44,17 +44,21 @@ export default function LoadingScreen({DOMisLoaded}) {
                 <div className="loading-screen-container" ref={loadingScreenContainer}>
                     <div className="loading-logo-container" >
                         <div className="loading-welcome-wrapper" ref={rotaryWelcomeLogo}>
-                            <Image src="/images/loading-welcome-text.png" alt="" width="170" height="180" />
+                            <Image src="/images/loading-welcome-text.png" alt="Loading Logo" width="170" height="190" />
                         </div>
                         <div className="loading-plus-wrapper">
-                            <Image src="/images/loading-plus.png" alt="" width="40" height="40" />
+                            <Image src="/images/loading-plus.png" alt="Loading Logo" width="40" height="40" />
                         </div>
+                    </div>
+                    <div className="loading-line-container" >
+                            <Image src="/images/loading-line.png" alt="Loading Logo" width="417" height="313" />
                     </div>
                 </div>
             </div>
             <style jsx>{`
                 .loading-screen-wrapper{
-                    transition: 1.5s;
+                    transition: 0.7s;
+                    transition-timing-function: ease-in-out;
                     position: relative;
                     overflow: hidden;
                     height: 100vh;
@@ -63,6 +67,45 @@ export default function LoadingScreen({DOMisLoaded}) {
                 .DOMfinishedLoading{
                     height: 0;
                 }
+
+                .loading-screen-container {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    opacity: 0;
+                    justify-content: center;
+                }
+                
+                .loading-logo-container {
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    height: 100vh;
+                    bottom: 16vh;
+                }
+                
+                .loading-welcome-wrapper {
+                    display: flex;
+                    align-items: center;
+                }
+                
+                .loading-plus-wrapper {
+                    width: 100%;
+                    position: absolute;
+                    display: flex;
+                    align-content: center;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                }
+
+                .loading-line-container {
+                    position: absolute;
+                    height: 100vh;
+                    bottom: -52vh;
+                }
+
             `}</style>
         </>
     )
