@@ -14,3 +14,48 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.loading-screen-container {
+  width: 100vw;
+  height: 100vh;
+  border: 0.1rem solid black;
+}
+
+.loading-logo-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 84%;
+}
+
+.loading-welcome-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.loading-plus-wrapper {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.main-section-container {
+  min-height: 100vh;
+}
+
+.navheader-container {
+  border: 1px solid black;
+}
+
+main {
+  border: 0.1rem solid yellow;
+  min-height: calc(100vh - 3rem);
+}
+
+footer {
+  border: 0.1rem solid red;
+}
