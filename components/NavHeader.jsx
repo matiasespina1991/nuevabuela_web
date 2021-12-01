@@ -8,7 +8,7 @@ export default function NavHeader() {
                 <div className="navheader-container">
                     <div className="nuevabuela-logo">
                         <Link href="/">
-                            <Image src="/images/nuevabuela-logo5.png" alt="Nuevabuela Logo" width="141" height="140" quality="100"/>
+                            <Image src="/images/nuevabuela_logo_final3.png" alt="Nuevabuela Logo" width="110" height="130" quality="100"/>
                         </Link>
                     </div>
                     <nav className="nav-container">
