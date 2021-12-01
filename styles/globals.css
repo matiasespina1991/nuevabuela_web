@@ -54,7 +54,7 @@ p {
 }
 
 .navheader-container {
-  width: 60%;
+  width: 70%;
   border-bottom: 0.15rem solid #e4ae8b;
   display: flex;
   flex-direction: column;
@@ -70,7 +70,7 @@ p {
   justify-content: space-around;
 }
 .nav-container {
-  width: 45rem;
+  width: 55rem;
 }
 .navheader-container a {
   font-family: "Coco Gothic";
@@ -153,14 +153,14 @@ p {
 
 .contact-us-footer p {
   font-size: 1.8rem;
-  color: white;
+  color: black;
   padding-top: 1.9rem;
   font-family: "Coco Gothic Light";
 }
 
 .contact-us-footer strong {
   font-size: 1.8rem;
-  color: white;
+  color: black;
   font-family: "Coco Gothic Bold";
 }
 
@@ -199,6 +199,7 @@ h1 {
 }
 
 footer {
-  background: #e4ae8b;
-  min-height: 14rem;
+  background: white;
+  border-top: 2px solid black;
+  min-height: 24rem;
 }
