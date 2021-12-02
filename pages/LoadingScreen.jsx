@@ -4,12 +4,14 @@ import { gsap } from "gsap";
 
 export default function LoadingScreen({DOMisLoaded}) {
     const [ DOMfinishedLoading, setDOMfinishedLoading ] = useState(false)
+    const [ LoaderDisplayNone, setLoaderDisplayNone ] = useState(false)
 
     const rotaryWelcomeLogo = useRef();
     const loadingScreenContainer = useRef();
 
     useEffect(() => {
         DOMisLoaded ? setTimeout(function(){ setDOMfinishedLoading(true) }, 4000) : null
+        DOMisLoaded ? setTimeout(function(){ setLoaderDisplayNone(true) }, 4500) : null
     }, [DOMisLoaded])
 
     useEffect(() => {
@@ -40,7 +42,7 @@ export default function LoadingScreen({DOMisLoaded}) {
 
     return(
         <>
-            <div className={`loading-screen-wrapper ${DOMfinishedLoading ? "DOMfinishedLoading" : "DOMisLoading"}`}>
+            <div className={`loading-screen-wrapper ${DOMfinishedLoading ? "DOMfinishedLoading" : "DOMisLoading"} ${LoaderDisplayNone ? "display-none" : null }`}>
                 <div className="loading-screen-container" ref={loadingScreenContainer}>
                     <div className="loading-logo-container" >
                         <div className="loading-welcome-wrapper" ref={rotaryWelcomeLogo}>
@@ -59,13 +61,21 @@ export default function LoadingScreen({DOMisLoaded}) {
                 .loading-screen-wrapper{
                     transition: 0.7s;
                     transition-timing-function: ease-in-out;
-                    position: relative;
+                    position: absolute;
                     overflow: hidden;
+                    opacity: 1;
                     height: 100vh;
+                    width: 100vw;
+                    background: white;
+                    z-index: 100;
                 }
 
                 .DOMfinishedLoading{
-                    height: 0;
+                    opacity:0;
+                }
+
+                .display-none {
+                    display: none;
                 }
 
                 .loading-screen-container {
@@ -73,7 +83,7 @@ export default function LoadingScreen({DOMisLoaded}) {
                     width: 100%;
                     height: 100%;
                     display: flex;
-                    opacity: 0;
+                    opacity: 1;
                     justify-content: center;
                 }
                 

@@ -47,7 +47,7 @@ export default function Home() {
               <strong>nuevabuela</strong> is a brand that relates interior design with art in all its forms, that appreciates beauty and specialness, marking all designs with unique touches. 
               <br />
               <br />
-              Our brand is color and originality, a mix of vintage and new elements that creates a contemporary and retro style full of personality, inspired by the Bauhaus movement and the 50s, 60s and 70s. It’s a brand that picks up the colors of the earth and combines them with strong and bold tones that generates spaces full of energy and character. 
+              Our brand is color and originality, a mix of vintage and new elements that creates a contemporary and retro style full of personality, inspired by the Bauhaus movement and the fifties, sixties and seventies. It’s a brand that picks up the colors of the earth and combines them with strong and bold tones that generates spaces full of energy and character. 
               <br />
               <br />
               <strong>nuevabuela</strong> plays with tones, textures and geometric shapes and patterns that create warm and cozy environments. Our brand is constantly looking for unique pieces from the past to give them a second life, restoring them with the idea of reusing and contributing to the environment.

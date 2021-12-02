@@ -26,6 +26,41 @@
   font-weight: 500;
   font-display: swap;
 }
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/montserrat/Montserrat-Medium.ttf");
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/montserrat/Montserrat-Medium.ttf");
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Comforta";
+  src: url("/fonts/comfortaa/Comfortaa.ttf");
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/raleway/Raleway.ttf");
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Larken Bold";
+  src: url("/fonts/larken-bold/larken-bold.ttf");
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
 
 html,
 body {
@@ -42,6 +77,7 @@ a {
 
 p {
   text-align: center;
+  font-family: "Coco Gothic Light";
 }
 
 * {
@@ -73,9 +109,14 @@ p {
   width: 55rem;
 }
 .navheader-container a {
-  font-family: "Coco Gothic";
-  letter-spacing: 0.7px;
+  font-family: "Comforta";
+  letter-spacing: 0.3px;
   font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.navheader-container a:hover {
+  text-shadow: 0px 0px 0.01px black;
 }
 .nuevabuela-logo {
   display: flex;
@@ -187,8 +228,8 @@ p {
 
 main {
   min-height: calc(100vh - 3rem);
-  padding: 4rem 14rem;
-  padding-bottom: 5rem;
+  padding: 5rem 14rem;
+  padding-bottom: 6rem;
 }
 
 h1 {
@@ -201,5 +242,5 @@ h1 {
 footer {
   background: white;
   border-top: 2px solid black;
-  min-height: 22rem;
+  min-height: 19rem;
 }
