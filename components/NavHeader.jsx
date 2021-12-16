@@ -14,22 +14,22 @@ export default function NavHeader() {
                     <nav className="nav-container">
                         <ul>
                             <li>
-                                <Link href="/">
+                                <Link href="/" scroll={false}>
                                     <a>Home</a>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/interior-design" scroll={false}>
                                     <a>Interior Design</a>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/set-design" scroll={false}>
                                     <a>Set Design</a>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/event-design" scroll={false}>
                                     <a>Event Design</a>
                                 </Link>
                             </li>
