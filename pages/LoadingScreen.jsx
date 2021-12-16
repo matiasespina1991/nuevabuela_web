@@ -10,8 +10,8 @@ export default function LoadingScreen({DOMisLoaded}) {
     const loadingScreenContainer = useRef();
 
     useEffect(() => {
-        DOMisLoaded ? setTimeout(function(){ setDOMfinishedLoading(true) }, 4000) : null
-        DOMisLoaded ? setTimeout(function(){ setLoaderDisplayNone(true) }, 4500) : null
+        DOMisLoaded ? setTimeout(function(){ setDOMfinishedLoading(true) }, 5000) : null
+        DOMisLoaded ? setTimeout(function(){ setLoaderDisplayNone(true) }, 6000) : null
     }, [DOMisLoaded])
 
     useEffect(() => {
@@ -52,9 +52,9 @@ export default function LoadingScreen({DOMisLoaded}) {
                             <Image src="/images/loading-plus.png" alt="Loading Logo" width="40" height="40" />
                         </div>
                     </div>
-                    <div className="loading-line-container" >
+                    {/* <div className="loading-line-container" >
                             <Image src="/images/loading-line.png" alt="Loading Logo" width="417" height="313" />
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <style jsx>{`
@@ -92,7 +92,6 @@ export default function LoadingScreen({DOMisLoaded}) {
                     display: flex;
                     justify-content: center;
                     height: 100vh;
-                    bottom: 16vh;
                 }
                 
                 .loading-welcome-wrapper {
