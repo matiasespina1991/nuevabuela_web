@@ -1,4 +1,4 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import { useRef, useEffect, useState } from 'react';
 import { gsap } from "gsap";
 
@@ -46,10 +46,12 @@ export default function LoadingScreen({DOMisLoaded}) {
                 <div className="loading-screen-container" ref={loadingScreenContainer}>
                     <div className="loading-logo-container" >
                         <div className="loading-welcome-wrapper" ref={rotaryWelcomeLogo}>
-                            <Image src="/images/loading-welcome-text.png" alt="Loading Logo" width="170" height="190" />
+                            {/* <Image src="/images/loading-welcome-text.png" alt="Loading Logo" width="170" height="190" /> */}
+                            <img src="/images/loading-welcome-text.png" alt="Loading Logo" width="170" height="190" />
                         </div>
                         <div className="loading-plus-wrapper">
-                            <Image src="/images/loading-plus.png" alt="Loading Logo" width="40" height="40" />
+                            {/* <Image src="/images/loading-plus.png" alt="Loading Logo" width="40" height="40" /> */}
+                            <img src="/images/loading-plus.png" alt="Loading Logo" width="40" height="40" />
                         </div>
                     </div>
                     {/* <div className="loading-line-container" >

@@ -1,15 +1,16 @@
 import Footer from '../components/footer'
 import NavHeader from '../components/NavHeader'
 import NavHeaderSticky from '../components/NavHeaderSticky'
+import Image from 'next/image'
 
-export default function interiorDesign(){
+export default function eventDesign(){
     return(
         <>
             <div className="main-section-container">
                 <NavHeader />
                 <NavHeaderSticky />
                 <main>
-                    <div className="section-header--container">
+                    {/* <div className="section-header--container">
                         <div className="section-header-child--wrapper section-header-child-left--wrapper">
                             <div className="section-header-child section-header-child-left">
                                 event
@@ -20,15 +21,15 @@ export default function interiorDesign(){
                                 design
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="demo-slide-sections--wrapper">
-                        <img src="/images/demo-slider-sections.png"></img>
+                        {/* <Image width={100} height={100} alt="" src="/images/demo-slider-sections.png"></Image> */}
+                        <img alt="" src="/images/demo-slider-sections.png" className="round-border-image" />
                     </div>
                     <style jsx>{`
                         .demo-slide-sections--wrapper {
                             display: flex;
                             justify-content: center;
-                            margin-top: 4rem;
                         }
                         .demo-slide-sections--wrapper img {
                             width: 35rem;

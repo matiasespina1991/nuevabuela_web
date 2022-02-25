@@ -1,8 +1,7 @@
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function footer() {
     return(
-
         <footer>
           <div className="contact-us-footer">
             <p>
@@ -10,15 +9,21 @@ export default function footer() {
             </p>
             <div className="footer-social-icons-container">
               <div>
-                <Image
+                {/* <Image
                   src="/images/instagram-icon.svg"
                   alt=""
                   width="40"
                   height="40"
-                />
+                /> */}
+                 <img
+                  src="/images/instagram-icon.svg"
+                  alt=""
+                  width="40"
+                  height="40"
+                  />
               </div>
               <div>
-                <Image
+                <img
                   src="/images/pinterest-icon.svg"
                   alt=""
                   width="40"
@@ -26,7 +31,7 @@ export default function footer() {
                 />
               </div>
               <div>
-                <Image
+                <img
                   src="/images/whatsapp-icon.svg"
                   alt=""
                   width="40"

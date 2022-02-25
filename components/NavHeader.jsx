@@ -1,4 +1,4 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import Link from 'next/link'
 
 export default function NavHeader() {
@@ -7,8 +7,11 @@ export default function NavHeader() {
             <div className="navheader-wrapper">
                 <div className="navheader-container">
                     <div className="nuevabuela-logo">
-                        <Link href="/">
+                         {/* <Link passHref href="/">
                             <Image src="/images/nuevabuela_logo.png" alt="Nuevabuela Logo" width="110" height="130" quality="100"/>
+                        </Link> */}
+                        <Link passHref href="/">
+                            <img src="/images/nuevabuela_logo.png" alt="Nuevabuela Logo" style={{ width:"110px", height:"130px" }} />
                         </Link>
                     </div>
                     <nav className="nav-container">

@@ -9,7 +9,7 @@ export default function setDesign(){
                 <NavHeader />
                 <NavHeaderSticky />
                 <main>
-                    <div className="section-header--container">
+                    {/* <div className="section-header--container">
                         <div className="section-header-child--wrapper section-header-child-left--wrapper">
                             <div className="section-header-child section-header-child-left">
                                 set
@@ -20,7 +20,7 @@ export default function setDesign(){
                                 design
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="demo-slide-sections--wrapper">
                         <img src="/images/demo-slider-sections.png"></img>
                     </div>
@@ -28,7 +28,6 @@ export default function setDesign(){
                         .demo-slide-sections--wrapper {
                             display: flex;
                             justify-content: center;
-                            margin-top: 4rem;
                         }
                         .demo-slide-sections--wrapper img {
                             width: 35rem;

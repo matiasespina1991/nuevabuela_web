@@ -1,6 +1,7 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import Link from 'next/link'
 import { useRef , useEffect, useState } from 'react'
+import Image from 'next/image'
 
 
 export default function NavHeader() {
@@ -30,14 +31,13 @@ export default function NavHeader() {
         <>
             <div ref={headerSticky_wrapper} className={`navheader-wrapper navheader-sticky-wrapper ${showSticky ? "sticky-active" : "sticky-hidden"}`}>
                 <div className="sticky-header-logo--wrapper">
-                    <img src="/images/nuevabuela_logo_final3.png" alt="">
-
-                    </img>
+                    <img src="/images/nuevabuela_logo_final3.png" alt="" />
                 </div>
                 <div className="navheader-container">
                     <div className="nuevabuela-logo">
                         <Link href="/" passHref>
-                            <Image src="/images/nuevabuela_logo.png" alt="Nuevabuela Logo" width="110" height="130" quality="100"/>
+                            <img src="/images/nuevabuela_logo.png" alt="Nuevabuela Logo" width="110" height="130" />
+                            {/* <Image src="/images/nuevabuela_logo.png" alt="Nuevabuela Logo" width="110" height="130" quality="100"/> */}
                         </Link>
                     </div>
                     <nav className="nav-container">
