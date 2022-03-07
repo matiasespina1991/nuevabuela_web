@@ -94,6 +94,10 @@ p {
   font-family: "Comforta-l";
 }
 
+li {
+  font-family: "Comforta-l";
+}
+
 * {
   box-sizing: border-box;
 }
@@ -109,7 +113,8 @@ p {
 }
 
 .navheader-container {
-  width: 68%;
+  width: 80%;
+  max-width: 75rem;
   border-bottom: 0.15rem solid #e4ae8b;
   display: flex;
   flex-direction: column;
@@ -125,7 +130,7 @@ p {
   justify-content: space-around;
 }
 .nav-container {
-  width: 55rem;
+  width: 100%;
 }
 .navheader-container a {
   font-family: "Comforta-l";
@@ -162,6 +167,14 @@ p {
   display: flex;
   justify-content: center;
 }
+
+.section-header h1 {
+  font-family: "Comforta-l";
+  letter-spacing: 0.6rem;
+  margin-bottom: 4rem;
+  font-weight: 100;
+}
+
 .section-header-child--wrapper {
   min-width: 15rem;
   min-height: 4.5rem;
@@ -228,7 +241,6 @@ p {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 3rem;
 }
 
 .home-our-brand-featured-images-container > div {
@@ -272,7 +284,7 @@ p {
 
 .our-brand p,
 .about-us p {
-  max-width: 32rem;
+  /* max-width: 32rem; */
   line-height: 1.5rem;
   font-size: 0.95rem;
   text-align: left;
@@ -324,7 +336,7 @@ p {
 
 main {
   min-height: calc(100vh - 3rem);
-  padding: 5rem 20%;
+  padding: 5rem 18%;
   padding-bottom: 4rem;
 }
 
@@ -340,4 +352,24 @@ footer {
   background: white;
   border-top: 2px solid black;
   min-height: 19rem;
+}
+
+/* react elastic slider */
+.rec-pagination button.rec-dot_active {
+  box-shadow: 0 0 1px 3px rgb(96 96 96);
+  background-color: rgb(0 0 0 / 31%);
+}
+
+.rec-carousel button.rec-arrow:hover {
+  background-color: rgb(203, 203, 203);
+}
+
+.rec-carousel button.rec-arrow:enabled {
+  background-color: rgb(135 135 135 / 32%);
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    padding: 5rem 0;
+  }
 }

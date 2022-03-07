@@ -51,7 +51,7 @@ export default function LoadingScreen({DOMisLoaded}) {
                         </div>
                         <div className="loading-plus-wrapper">
                             {/* <Image src="/images/loading-plus.png" alt="Loading Logo" width="40" height="40" /> */}
-                            <img src="/images/loading-plus.png" alt="Loading Logo" width="40" height="40" />
+                            <img src="/images/loading-dot.gif" alt="Loading Logo" width="30" height="30" />
                         </div>
                     </div>
                     {/* <div className="loading-line-container" >
