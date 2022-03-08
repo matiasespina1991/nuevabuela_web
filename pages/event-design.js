@@ -24,8 +24,8 @@ export default function interiorDesign(){
     ]
 
     const backgroundImagesProps = {
-        width: '18rem',
-        height: '30rem',
+        width: '16rem',
+        height: '28rem',
         borderRadius: '2.5rem',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -43,7 +43,7 @@ export default function interiorDesign(){
                     </div>
                     
 
-                    <Carousel breakPoints={[{ width: 300 , itemsToShow: 1 },{ width: 600 , itemsToShow: 2 },{ width: 950, itemsToShow: 3 }]}>
+                    <Carousel breakPoints={[{ width: 300 , itemsToShow: 1 },{ width: 600 , itemsToShow: 2 },{ width: 800, itemsToShow: 3 }]}>
                         {slides.map((slide) => {
                             console.log(slide)
                             return(

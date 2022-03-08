@@ -34,7 +34,7 @@ export default function Home() {
       <div className="main-section-container">
         <NavHeader />
         <NavHeaderSticky />
-        <main>
+        <main className="index">
           <div className="our-brand--wrapper">
             
             <div className="our-brand">
