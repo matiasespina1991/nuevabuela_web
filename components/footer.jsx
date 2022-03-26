@@ -13,8 +13,8 @@ export default function footer() {
               <strong>Contact Us</strong> and schedule your consultation
             </p>
             <div className="footer-social-icons-container">
-              <SocialIcon url='https://www.instagram.com/nuevabuela/' className="social-icon" network="instagram" />
-              <SocialIcon className="social-icon" network="pinterest" />
+              <SocialIcon target="_blank" url='https://www.instagram.com/nuevabuela/' className="social-icon" network="instagram" />
+              <SocialIcon url="mailto:info@nuevabuela.com" className="social-icon" network="mailto" />
               <SocialIcon url='tel:+49(0)15127950874' className="social-icon" network="whatsapp" />
             </div>
           </div>
