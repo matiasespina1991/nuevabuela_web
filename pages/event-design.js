@@ -87,7 +87,7 @@ export default function interiorDesign(){
                             font-size:1.5rem;
                             font-weight: 200;
                             min-width: max-content;
-                            margin-bottom: 1rem;
+                            margin-bottom: 1.3rem;
                         }
                         .sections-list--wrapper{
                             display: flex;

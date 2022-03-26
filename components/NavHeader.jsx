@@ -42,7 +42,7 @@ export default function NavHeader() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/contact">
                                     <a>Contact</a>
                                 </Link>
                             </li>

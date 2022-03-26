@@ -115,7 +115,7 @@ li {
 .navheader-container {
   width: 80%;
   max-width: 75rem;
-  border-bottom: 0.15rem solid #e4ae8b;
+  border-bottom: 0.15rem solid #aaaaaa;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,7 +170,7 @@ li {
 
 .section-header h1 {
   font-family: "Comforta-l";
-  letter-spacing: 0.6rem;
+  font-size: 2rem;
   margin-bottom: 4rem;
   font-weight: 100;
 }
@@ -290,10 +290,23 @@ li {
   text-align: left;
 }
 
+.our-brand h1,
+.about-us h1 {
+  margin-bottom: 1rem;
+}
+
 .separator {
   display: flex;
   justify-content: center;
   padding: 4rem;
+}
+
+.sections-list--wrapper {
+  margin-top: 1rem;
+}
+
+.sections-list--wrapper ul li {
+  font-size: 1.4rem;
 }
 
 .contact-us-footer {
@@ -345,11 +358,12 @@ main.index {
 }
 
 h1 {
-  font-family: "Comforta";
+  font-family: "Comforta-l";
   text-transform: uppercase;
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin: 0.2rem;
+  font-weight: 100;
 }
 
 footer {
@@ -370,6 +384,36 @@ footer {
 
 .rec-carousel button.rec-arrow:enabled {
   background-color: rgb(135 135 135 / 32%);
+}
+
+@media (max-width: 800px) {
+  .navheader-wrapper .nuevabuela-logo img {
+    width: 80px;
+    height: 95px;
+  }
+  .our-brand--wrapper,
+  .about-us--wrapper {
+    display: flex;
+    grid-template-columns: 0;
+    grid-gap: 0;
+    flex-direction: column;
+  }
+  .home-our-brand-featured-images-container {
+    order: 1;
+  }
+  .our-brand {
+    order: 2;
+  }
+  .our-brand,
+  .about-us {
+    margin-top: 3.2rem;
+  }
+  .nav-container {
+    display: none;
+  }
+  .contanct-us-footer {
+    margin: 0 1rem;
+  }
 }
 
 @media screen and (max-width: 500px) {

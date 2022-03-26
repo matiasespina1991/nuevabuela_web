@@ -39,21 +39,23 @@ export default function Home() {
             
             <div className="our-brand">
               <h1>Our Brand</h1>
-              <p> 
+              <p>
                 NUEVABUELA is a brand that relates interior design with art in all its forms, that appreciates beauty and specialness, marking all designs with unique touches. 
               </p>
-
               <p>
-                Our brand is colour and originality, a mix of vintage and new elements that create a contemporary and retro style full of personality, inspired by the Bauhaus movement and the 50s, 60s and 70s.
+                Our brand is colour and originality, a mix of vintage and new elements that create a contemporary and retro style full of personality, inspired by the Bauhaus movement and the 50s, 60s and 70s. 
               </p>
-                
               <p>
                 It’s a brand that picks up the colours of the earth and combines them with strong and bold tones, generating spaces full of energy and character. 
               </p>
-                
               <p>
                 NUEVABUELA plays with tones, textures, geometric shapes and patterns that all together create warm and cosy environments. 
               </p>
+              <p>
+                Our brand is constantly looking for unique pieces from the past to give them a second life, restoring them with the idea of reusing and contributing to the environment.
+              </p>
+
+
                 
               <p>
                 Our brand is constantly looking for unique pieces from the past to give them a second life, restoring them with the idea of reusing and contributing to the environment.
