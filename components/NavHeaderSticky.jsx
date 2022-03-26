@@ -17,7 +17,7 @@ export default function NavHeader() {
             } else {
                     setShowSticky(false)
             }
-            console.log(showSticky)
+            // console.log(showSticky)
         }
 
         window.addEventListener('scroll', getOffsetTop)
@@ -35,7 +35,7 @@ export default function NavHeader() {
                 </div>
                 <div className="navheader-container">
                     <div className="nuevabuela-logo">
-                        <Link href="/" passHref>
+                        <Link href="/" passHref scroll={false}>
                             <img src="/images/nuevabuela_logo.png" alt="Nuevabuela Logo" width="110" height="130" />
                             {/* <Image src="/images/nuevabuela_logo.png" alt="Nuevabuela Logo" width="110" height="130" quality="100"/> */}
                         </Link>
@@ -43,7 +43,7 @@ export default function NavHeader() {
                     <nav className="nav-container">
                         <ul>
                             <li>
-                                <Link href="/" scroll={false}>
+                                <Link href="/?home" scroll={false} >
                                     <a>Home</a>
                                 </Link>
                             </li>
@@ -63,12 +63,12 @@ export default function NavHeader() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/inspirations" scroll={false}>
                                     <a>Inspirations</a>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/contact" scroll={false}>
                                     <a>Contact</a>
                                 </Link>
                             </li>

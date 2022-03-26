@@ -1,12 +1,16 @@
 import Head from "next/head";
+import { useRouter } from 'next/router';
 import { useEffect, useState } from "react";
 import LoadingScreen from "../components/LoadingScreen";
 import NavHeader from "../components/NavHeader";
 import NavHeaderSticky from "../components/NavHeaderSticky";
 import Footer from '../components/footer'
 
+
 export default function Home() {
   const [DOMisLoaded, setDOMisLoaded] = useState(false);
+  const router = useRouter();
+  const preventLoadingScreen = router.asPath.includes('?home') 
 
   useEffect(() => {
     setDOMisLoaded(true);
@@ -30,7 +34,7 @@ export default function Home() {
           crossOrigin=""
         />
       </Head>
-      <LoadingScreen DOMisLoaded={DOMisLoaded} />
+      { !preventLoadingScreen && <LoadingScreen DOMisLoaded={DOMisLoaded} /> }
       <div className="main-section-container">
         <NavHeader />
         <NavHeaderSticky />

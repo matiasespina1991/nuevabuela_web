@@ -97,6 +97,7 @@ export default function interiorDesign(){
                     `}
                     </style>
                 </main>
+                <Footer />
             </div>
             {/* <Footer /> */}
         </>

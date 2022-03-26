@@ -7,17 +7,17 @@ export default function NavHeader() {
             <div className="navheader-wrapper">
                 <div className="navheader-container">
                     <div className="nuevabuela-logo">
-                         {/* <Link passHref href="/">
+                        {/* <Link passHref href="/">
                             <Image src="/images/nuevabuela_logo.png" alt="Nuevabuela Logo" width="110" height="130" quality="100"/>
                         </Link> */}
-                        <Link passHref href="/">
+                        <Link passHref href="/?home" scroll={false}>
                             <img src="/images/nuevabuela_logo.png" alt="Nuevabuela Logo" style={{ width:"110px", height:"130px" }} />
                         </Link>
                     </div>
                     <nav className="nav-container">
                         <ul>
                             <li>
-                                <Link href="/" scroll={false}>
+                                <Link href="/?home" scroll={false}>
                                     <a>Home</a>
                                 </Link>
                             </li>
@@ -37,12 +37,12 @@ export default function NavHeader() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/">
+                                <Link href="/inspirations" scroll={false}>
                                     <a>Inspirations</a>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact">
+                                <Link href="/contact" scroll={false}>
                                     <a>Contact</a>
                                 </Link>
                             </li>
