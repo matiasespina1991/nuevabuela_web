@@ -5,12 +5,13 @@ import LoadingScreen from "../components/LoadingScreen";
 import NavHeader from "../components/NavHeader";
 import NavHeaderSticky from "../components/NavHeaderSticky";
 import Footer from '../components/footer'
-
+import {Squash as Hamburger} from 'hamburger-react'
 
 export default function Home() {
   const [DOMisLoaded, setDOMisLoaded] = useState(false);
   const router = useRouter();
   const preventLoadingScreen = router.asPath.includes('?home') 
+  const [isOpen, setOpen] = useState(false)
 
   useEffect(() => {
     setDOMisLoaded(true);
@@ -36,6 +37,7 @@ export default function Home() {
       </Head>
       { !preventLoadingScreen && <LoadingScreen DOMisLoaded={DOMisLoaded} /> }
       <div className="main-section-container">
+      <Hamburger toggled={isOpen} toggle={setOpen} />
         <NavHeader />
         <NavHeaderSticky />
         <main className="index">
