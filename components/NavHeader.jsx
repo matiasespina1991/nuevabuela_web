@@ -11,7 +11,7 @@ export default function NavHeader() {
                             <Image src="/images/nuevabuela_logo.png" alt="Nuevabuela Logo" width="110" height="130" quality="100"/>
                         </Link> */}
                         <Link passHref href="/?home" scroll={false}>
-                            <img src="/images/nuevabuela_logo.png" alt="Nuevabuela Logo" style={{ width:"110px", height:"130px" }} />
+                            <img src="/images/nuevabuela_logo.png" alt="Nuevabuela Logo" style={{ maxWidth: "6.5rem" }} />
                         </Link>
                     </div>
                     <nav className="nav-container">
