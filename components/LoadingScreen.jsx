@@ -15,10 +15,6 @@ export default function LoadingScreen({DOMisLoaded}) {
     }, [DOMisLoaded])
 
     useEffect(() => {
-        document.body.style.overflow = DOMfinishedLoading ? "auto" : "hidden";
-    }, [DOMfinishedLoading])
-
-    useEffect(() => {
         gsap.to(loadingScreenContainer.current, { 
             opacity: 1,
             delay: 1,
