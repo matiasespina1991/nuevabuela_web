@@ -85,7 +85,7 @@ export default function NavHeader() {
                 .sticky-header-logo--wrapper {
                     align-self: end;
                     position:absolute;
-                    left: 5rem;
+                    left: 4.4rem;
                 }
                 .navheader-sticky-wrapper {
                     position: fixed;

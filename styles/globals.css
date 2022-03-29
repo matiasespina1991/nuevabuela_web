@@ -102,6 +102,13 @@ li {
   box-sizing: border-box;
 }
 
+.hamburger-react {
+  display: none;
+}
+.responsive-menu--wrapper {
+  display: none;
+}
+
 .round-border-image {
   border-radius: 30px;
 }
@@ -115,7 +122,7 @@ li {
 .navheader-container {
   width: 80%;
   max-width: 75rem;
-  border-bottom: 0.15rem solid #aaaaaa;
+  border-bottom: 0.05rem solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -285,6 +292,8 @@ li {
 .our-brand p,
 .about-us p {
   /* max-width: 32rem; */
+  margin-block: 0;
+  margin-block-end: 0.8rem;
   line-height: 1.5rem;
   font-size: 0.95rem;
   text-align: left;
@@ -370,8 +379,8 @@ footer {
 
 footer .space-block {
   margin: 2rem 0;
-  width: 4rem;
-  border: 1px solid #aaaaaa;
+  width: 3.5rem;
+  border-top: 2px solid black;
 }
 
 /* react elastic slider */
@@ -389,6 +398,25 @@ footer .space-block {
 }
 
 @media (max-width: 800px) {
+  .hamburger-react {
+    display: block;
+    left: 0.7rem;
+    top: 0.3rem;
+    position: fixed !important;
+    z-index: 20;
+  }
+  .responsive-menu--container {
+    position: absolute;
+    display: flex;
+    background-color: #c7c7c7f5;
+    backdrop-filter: blur(9px);
+    box-shadow: 0px -21px 23px #000000d6;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  }
   .navheader-wrapper .nuevabuela-logo img {
     width: 80px;
     height: 95px;
@@ -418,8 +446,11 @@ footer .space-block {
   }
 }
 
-@media screen and (max-width: 500px) {
-  main {
-    padding: 5rem 0;
+@media (max-width: 500px) {
+  main.index {
+    padding: 4.2rem 8%;
+  }
+  .navheader-wrapper {
+    display: none;
   }
 }

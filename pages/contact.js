@@ -34,7 +34,7 @@ export default function interiorDesign(){
                             flex-direction: column;
                             justify-content: center;
                             text-align: center;
-                            height: 14rem;
+                            height: 9rem;
                         }
                         .contact-section--body li:hover .contact-page-link {
                             text-decoration: underline;

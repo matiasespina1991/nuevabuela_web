@@ -5,21 +5,27 @@ import LoadingScreen from "../components/LoadingScreen";
 import NavHeader from "../components/NavHeader";
 import NavHeaderSticky from "../components/NavHeaderSticky";
 import Footer from '../components/footer'
-import {Squash as Hamburger} from 'hamburger-react'
+import ResponsiveMenu from '../components/ResponsiveMenu'
 
 export default function Home() {
   const [DOMisLoaded, setDOMisLoaded] = useState(false);
   const router = useRouter();
-  const preventLoadingScreen = router.asPath.includes('?home') 
-  const [isOpen, setOpen] = useState(false)
+  // const preventLoadingScreen = router.asPath.includes('?home') 
+  const [ preventLoadingScreen, setPreventLoadingScreen ] = useState(false)
 
   useEffect(() => {
+    document.body.style.overflow = DOMisLoaded ? "auto" : "hidden";
+}, [DOMisLoaded])
+
+
+  useEffect(() => {
+    router.asPath.includes('?home') && setPreventLoadingScreen(true)
     setDOMisLoaded(true);
-  }, []);
+  }, [router.asPath]);
   return (
     <div>
       <Head>
-        <title>Nuevabuela Oficial</title>
+        <title>Nuevabuela</title>
         <meta name="description" content="Nuevabuela is a..." />
         <link rel="icon" href="/favicon.ico" />
         <link
@@ -35,9 +41,9 @@ export default function Home() {
           crossOrigin=""
         />
       </Head>
-      { !preventLoadingScreen && <LoadingScreen DOMisLoaded={DOMisLoaded} /> }
+      { preventLoadingScreen ? "" : <LoadingScreen DOMisLoaded={DOMisLoaded} /> }
       <div className="main-section-container">
-      <Hamburger toggled={isOpen} toggle={setOpen} />
+        <ResponsiveMenu />
         <NavHeader />
         <NavHeaderSticky />
         <main className="index">
@@ -61,11 +67,6 @@ export default function Home() {
                 Our brand is constantly looking for unique pieces from the past to give them a second life, restoring them with the idea of reusing and contributing to the environment.
               </p>
 
-
-                
-              <p>
-                Our brand is constantly looking for unique pieces from the past to give them a second life, restoring them with the idea of reusing and contributing to the environment.
-              </p>
             </div>
             <div className="home-our-brand-featured-images-container">
               <div className="home-our-brand-featured-image-left round-border-image"></div>
@@ -88,15 +89,15 @@ export default function Home() {
               <p>
                 Everything started when we met and crossed our paths in London and
                 realised that we shared the same passions and dreams.
-                <br />
-                <br />
+              </p>
+              <p>
                 After completing our interior design studies in different cities,
                 we met again in Berlin, where we decided to put our ideas
-                together, and that&apos;s where <strong>nuevabuela</strong>{" "}
+                together, and that&apos;s where NUEVABUELA{" "}
                 begins. 
-                <br />
-                <br />
-                <strong>nuevabuela</strong> is a brand full of life and
+              </p>
+              <p>
+                NUEVABUELA is a brand full of life and
                 personality that was born from the desire to create a project and
                 express our creativity through our work.
               </p>
@@ -113,7 +114,7 @@ export default function Home() {
           </div>
           
         </main>
-<Footer />
+        <Footer />
       </div>
     </div>
   );
