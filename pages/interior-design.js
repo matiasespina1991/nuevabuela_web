@@ -65,7 +65,7 @@ export default function interiorDesign(){
                     <div className="sections-list--wrapper">
                         <ul>
                             <li>
-                                space planing
+                                space planning
                             </li>
                             <li>
                                 design consultation

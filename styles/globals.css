@@ -140,11 +140,15 @@ li {
   width: 100%;
 }
 .navheader-container a {
-  font-family: "Comforta-l";
+  font-family: "Comforta";
   letter-spacing: 0.15px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-transform: lowercase;
   transition: 0.3s;
+}
+
+.home-our-brand-featured-image-left, .home-our-brand-featured-image-right {
+  margin-top: 1.3rem !important;
 }
 
 .navheader-container a:hover {
@@ -247,7 +251,6 @@ li {
 .home-about-us-featured-images-container {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
 }
 
 .home-our-brand-featured-images-container > div {
@@ -380,7 +383,7 @@ footer {
 footer .space-block {
   margin: 2rem 0;
   width: 3.5rem;
-  border-top: 2px solid black;
+  border-top: 1px solid black;
 }
 
 /* react elastic slider */
