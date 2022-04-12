@@ -1,9 +1,78 @@
 import Footer from '../components/footer'
 import NavHeader from '../components/NavHeader'
 import NavHeaderSticky from '../components/NavHeaderSticky'
-import Grid from "../components/Grid";
+import Gallery from 'react-grid-gallery';
 
 export default function interiorDesign(){
+
+    const IMAGES =
+[{
+    src: "/images/stock_examples/stock1.png",
+    thumbnail: "/images/stock_examples/stock1.png",
+    caption: ""
+},
+{
+    src: "/images/stock_examples/stock2.jpg",
+    thumbnail: "/images/stock_examples/stock2.jpg",
+    caption: ""
+},
+
+{
+    src: "/images/stock_examples/stock3.jpg",
+    thumbnail: "/images/stock_examples/stock3.jpg",
+    caption: ""
+},
+{
+    src: "/images/stock_examples/stock4.jpg",
+    thumbnail: "/images/stock_examples/stock4.jpg",
+    caption: "",
+},
+{
+    src: "/images/stock_examples/stock5.jpg",
+        thumbnail: "/images/stock_examples/stock5.jpg",
+        caption: ""
+},
+{
+    src: "/images/stock_examples/stock6.jpg",
+        thumbnail: "/images/stock_examples/stock6.jpg",
+        caption: ""
+},
+{
+    src: "/images/stock_examples/stock7.jpg",
+        thumbnail: "/images/stock_examples/stock7.jpg",
+        caption: ""
+},
+{
+    src: "/images/stock_examples/stock8.jpg",
+        thumbnail: "/images/stock_examples/stock8.jpg",
+        caption: ""
+},
+{
+    src: "/images/stock_examples/stock9.jpg",
+        thumbnail: "/images/stock_examples/stock9.jpg",
+        caption: ""
+},
+{
+    src: "/images/stock_examples/stock10.jpg",
+        thumbnail: "/images/stock_examples/stock10.jpg",
+        caption: ""
+},
+{
+    src: "/images/stock_examples/stock11.jpg",
+        thumbnail: "/images/stock_examples/stock11.jpg",
+        caption: ""
+},
+{
+    src: "/images/stock_examples/stock12.jpg",
+        thumbnail: "/images/stock_examples/stock12.jpg",
+        caption: ""
+},
+{
+    src: "/images/stock_examples/stock13.jpg",
+        thumbnail: "/images/stock_examples/stock13.jpg",
+        caption: ""
+}
+]
 
     return(
         <>
@@ -14,19 +83,8 @@ export default function interiorDesign(){
                     <div className='section-header'>
                         <h1>INSPIRATIONS</h1>
                     </div>
-                    
 
-                    <main className="inspirations--body">
-                        <div>
-                        <Grid
-                            images="https://camo.githubusercontent.com/1f0cae0f2d2c89e4f5f1260f376f689464a792fdc50733baa4e512e6b299a77b/68747470733a2f2f692e696d6775722e636f6d2f4b7a5a456f77532e6a7067"
-                            rowHeight={200}
-                            margin={5}
-                            isLightboxEnabled={true}
-                            // width={Math.floor(windowSize.innerWidth * 0.8)}
-                        />
-                        </div>
-                    </main>
+                        <Gallery id="inspirations-gallery" margin="30px" rowHeight="360px" images={IMAGES}/>
                     <style jsx>{`
                         
                     `}

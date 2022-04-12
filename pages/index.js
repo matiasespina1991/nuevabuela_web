@@ -10,7 +10,6 @@ import ResponsiveMenu from '../components/ResponsiveMenu'
 export default function Home() {
   const [DOMisLoaded, setDOMisLoaded] = useState(false);
   const router = useRouter();
-  // const preventLoadingScreen = router.asPath.includes('?home') 
   const [ preventLoadingScreen, setPreventLoadingScreen ] = useState(false)
 
   useEffect(() => {

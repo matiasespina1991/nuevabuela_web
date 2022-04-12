@@ -1,8 +1,18 @@
 // import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+
+
 
 export default function NavHeader() {
+
+    const routerpath = useRouter();
+
+
+console.log(routerpath)
+
     return(
+    
         <>
             <div className="navheader-wrapper">
                 <div className="navheader-container">
@@ -17,12 +27,12 @@ export default function NavHeader() {
                     <nav className="nav-container">
                         <ul>
                             <li>
-                                <Link href="/?home" scroll={false}>
+                                <Link className="home-link" href="/?home" scroll={false}>
                                     <a>Home</a>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/interior-design" scroll={false}>
+                                <Link className="interior-design-link" href="/interior-design" scroll={false}>
                                     <a>Interior Design</a>
                                 </Link>
                             </li>
@@ -42,10 +52,13 @@ export default function NavHeader() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" scroll={false}>
+                                <Link href="/contact">
                                     <a>Contact</a>
                                 </Link>
                             </li>
+                            <style jsx>{`
+                        
+                            `}</style>
                         </ul>
                     </nav>
                 </div>

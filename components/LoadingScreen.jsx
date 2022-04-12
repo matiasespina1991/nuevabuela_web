@@ -59,7 +59,7 @@ export default function LoadingScreen({DOMisLoaded}) {
                 .loading-screen-wrapper{
                     transition: 0.7s;
                     transition-timing-function: ease-in-out;
-                    position: absolute;
+                    position: fixed;
                     overflow: hidden;
                     opacity: 1;
                     height: 100%;

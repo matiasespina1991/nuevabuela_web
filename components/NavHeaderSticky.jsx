@@ -68,7 +68,7 @@ export default function NavHeader() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/contact" scroll={false}>
+                                <Link href="/contact" >
                                     <a>Contact</a>
                                 </Link>
                             </li>

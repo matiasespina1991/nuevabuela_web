@@ -321,6 +321,24 @@ li {
   font-size: 1.4rem;
 }
 
+.ReactGridGallery_tile-viewport, .ReactGridGallery_tile-overlay{
+  border-radius: 1.5rem;
+}
+
+.ReactGridGallery_tile {
+  background: transparent !important;
+}
+
+.ReactGridGallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ReactGridGallery_tile-icon-bar{
+  display: none;
+}
+
 .contact-us-footer {
   display: flex;
   flex-direction: column;
