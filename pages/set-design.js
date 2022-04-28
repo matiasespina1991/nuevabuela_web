@@ -2,35 +2,46 @@ import Footer from '../components/footer'
 import NavHeader from '../components/NavHeader'
 import NavHeaderSticky from '../components/NavHeaderSticky'
 import Carousel from 'react-elastic-carousel'
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
-export default function interiorDesign(){
 
-    const slides = [
-        {
-            src: '/images/stock_examples/stock1.png'
-        },
-        {
-            src: '/images/stock_examples/stock2.jpg'
-        },
-        {
-            src: '/images/stock_examples/stock3.jpg'
-        },
-        {
-            src: '/images/stock_examples/stock4.jpg'
-        },
-        {
-            src: '/images/stock_examples/stock5.jpg'
-        }
-    ]
+export default function SetDesign(){
+    const [ wpData, setWpData ] = useState([])
+    const placeholderSliders = [1,2,3];
+
+    const api_route = "http://nuevabuela.local/wp-json/wp/v2/set_design"
 
     const backgroundImagesProps = {
+        position: 'relative',
+        cursor: 'pointer',
         width: '16rem',
         height: '28rem',
         borderRadius: '2.5rem',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
     }
+
+    
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await axios(
+                api_route,
+            );
+            const data = [result]
+            const trimmedData = data[0].data
+            setWpData(trimmedData)
+        };
+        fetchData();
+    }, []);
+
+    useEffect(() => {
+        console.log(wpData)
+    }, [wpData])
+    
+
 
     return(
         <>
@@ -43,25 +54,33 @@ export default function interiorDesign(){
                     </div>
                     
 
+
                     <Carousel breakPoints={[{ width: 300 , itemsToShow: 1 },{ width: 600 , itemsToShow: 2 },{ width: 800, itemsToShow: 3 }]}>
-                        {slides.map((slide) => {
-                            console.log(slide)
-                            return(
-                                <div key={slide.src} style={{ ...backgroundImagesProps, backgroundImage: `url(${slide.src})` }}></div>
-                            )
-                        })}
+                        
+                        {
+                            wpData.length === 0 ? 
+                            
+                            placeholderSliders.map((key) => {
+                                return(
+                                    <div key={key} style={{ ...backgroundImagesProps, opacity: 0.2, filter: "brightness(0.5)", backgroundImage: "url(/images/placeholders/sliders_placeholder.jpg)" }}></div>
+                                )
+                            })
+                            
+                            :
+                            
+                            wpData.map((slide) => {
+                                return(
+                                    <div key={slide.better_featured_image.source_url} className="wp-slide-image" style={{ ...backgroundImagesProps, backgroundImage: `url(${slide.better_featured_image.source_url})` }}>
+                                        <div className="wp-slide--overlay">
+                                        </div>
+                                        <div className="wp-slide--caption" dangerouslySetInnerHTML={{__html: slide.content.rendered}}></div>
+                                    </div>
+                                )
+                            })
+                        }
+                        
                     </Carousel>
 
-                    <style jsx>{`
-                        .demo-slide-sections--wrapper {
-                            display: flex;
-                            justify-content: center;
-                        }
-                        .demo-slide-sections--wrapper img {
-                            width: 35rem;
-                        }
-                    `}
-                    </style>
                     <div className="sections-list--wrapper">
                         <ul>
                             <li>
@@ -83,16 +102,54 @@ export default function interiorDesign(){
                             width: 28rem;
                             margin-top: 2rem;
                         }
-                        li{
+                        li {
                             font-size:1.5rem;
                             font-weight: 200;
                             min-width: max-content;
                             margin-bottom: 1.3rem;
                         }
-                        .sections-list--wrapper{
+                        .sections-list--wrapper {
                             display: flex;
                             flex-direction: column;
                             align-items: center;
+                        }
+                        .wp-slide-image {
+                            display: flex;
+                            flex-direction: column-reverse;
+                        }
+                        .wp-slide--overlay {
+                            transition: 0.4s;
+                            position: absolute;
+                            display: flex;
+                            flex-direction: column-reverse;
+                            border-radius: 2.5rem;
+                            height: 100%;
+                            width: 100%;
+                            opacity: 0;
+                            background: linear-gradient(0deg, rgba(2,0,36,0.9073564425770308) 0%, rgba(0,0,0,0.07307072829131656) 60%);
+                        }
+                        .wp-slide-image:hover .wp-slide--overlay {
+                            opacity: 1;
+                            filter: brightness(0.5);
+                        }
+                        .wp-slide--caption {
+                            transition: 0.2s;
+                            z-index: 1;
+                            text-align: justify;
+                            text-align: justify !important;
+                            opacity: 0;
+                            font-family: 'Comforta-l';
+                            overflow: hidden;
+                            color: white;
+                            text-overflow: ellipsis;
+                            margin-bottom: 2rem;
+                            padding: 0 0.4rem;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 8;
+                            -webkit-box-orient: vertical;
+                        }
+                        .wp-slide-image:hover .wp-slide--caption {
+                            opacity: 1;
                         }
                     `}
                     </style>
@@ -103,9 +160,5 @@ export default function interiorDesign(){
         </>
     )
 }
-
-
-
-
 
 

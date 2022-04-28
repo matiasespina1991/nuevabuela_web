@@ -339,12 +339,18 @@ li {
   display: none;
 }
 
+.wp-slide--caption p {
+  letter-spacing: 0.3px;
+  line-height: 1.2rem;
+}
+
 .contact-us-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
+
 .contact-us-footer p {
   font-size: 1.8rem;
   color: black;
