@@ -2,26 +2,14 @@ import Footer from '../components/footer'
 import NavHeader from '../components/NavHeader'
 import NavHeaderSticky from '../components/NavHeaderSticky'
 import Carousel from 'react-elastic-carousel'
+import axios from 'axios';
+import { useState, useEffect, useMemo } from 'react';
 
-export default function interiorDesign(){
 
-    const slides = [
-        {
-            src: '/images/stock_examples/stock1.png'
-        },
-        {
-            src: '/images/stock_examples/stock2.jpg'
-        },
-        {
-            src: '/images/stock_examples/stock3.jpg'
-        },
-        {
-            src: '/images/stock_examples/stock4.jpg'
-        },
-        {
-            src: '/images/stock_examples/stock5.jpg'
-        }
-    ]
+export default function InteriorDesign(){
+    const [ wpData, setWpData ] = useState([])
+
+    const api_route = "http://nuevabuela.local/wp-json/wp/v2/interior_design"
 
     const backgroundImagesProps = {
         width: '16rem',
@@ -31,6 +19,22 @@ export default function interiorDesign(){
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
     }
+
+    
+
+useEffect(() => {
+    const fetchData = async () => {
+        const result = await axios(
+            api_route,
+        );
+        const data = [result];
+        const trimmedData = data[0].data
+        setWpData(trimmedData);
+    };
+    fetchData();
+    }, []);
+
+
 
     return(
         <>
@@ -44,10 +48,9 @@ export default function interiorDesign(){
                     
 
                     <Carousel breakPoints={[{ width: 300 , itemsToShow: 1 },{ width: 600 , itemsToShow: 2 },{ width: 800, itemsToShow: 3 }]}>
-                        {slides.map((slide) => {
-                            console.log(slide)
+                        {wpData.map((slide) => {
                             return(
-                                <div key={slide.src} style={{ ...backgroundImagesProps, backgroundImage: `url(${slide.src})` }}></div>
+                                <div key={slide.better_featured_image.source_url} style={{ ...backgroundImagesProps, backgroundImage: `url(${slide.better_featured_image.source_url})` }}></div>
                             )
                         })}
                     </Carousel>
