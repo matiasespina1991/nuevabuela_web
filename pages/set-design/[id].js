@@ -46,7 +46,7 @@ export default function InteriorDesign(){
                                             <div className='section-header'>
                                                 <h1 dangerouslySetInnerHTML={{ __html: item.title.rendered }}></h1>
                                             </div>
-                                            <div dangerouslySetInnerHTML={{ __html: item.content.rendered }} />
+                                            <div style={{marginBottom: '5rem'}} dangerouslySetInnerHTML={{ __html: item.content.rendered }} />
                                             <div className='post-image-gallery'>
                                                     {item.gallery.map(
                                                         (image, key) => {
