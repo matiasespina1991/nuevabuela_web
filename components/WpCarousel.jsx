@@ -37,7 +37,7 @@ export default function WpCarousel({wpData}){
                     wpData.map((slide,key) => {
                         console.log(slide)
                         return(
-                            <Link key={key} href={`${router.pathname}/${slide.id}`} prefetch={true} scroll={false} passHref className="btn btn-primary">
+                            <Link key={key} href={`${router.pathname}/${slide.id}`} prefetch={true} passHref className="btn btn-primary">
                                 <div key={slide.better_featured_image.source_url} className="wp-slide-image" style={{ ...backgroundImagesProps, backgroundImage: `url(${slide.better_featured_image.source_url})` }}>
                                     <div className="wp-slide--overlay"></div>
                                     <h2 className="wp-slide--proyect-title" dangerouslySetInnerHTML={{__html: slide.title.rendered}}></h2>

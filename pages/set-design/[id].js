@@ -4,7 +4,7 @@ import NavHeaderSticky from '../../components/NavHeaderSticky'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-
+import Link from 'next/link'
 
 export default function InteriorDesign(){
     const [ wpData, setWpData ] = useState([])
@@ -43,6 +43,12 @@ export default function InteriorDesign(){
                                 if(item.id.toString() == pathId){
                                     return(
                                         <div key={key}>
+                                            <div style={{marginBottom: '2.5rem'}} className="post-breadcrumb">
+                                            <Link href={'/set-design/'} prefetch={true} passHref className="btn btn-primary">
+                                            SET DESIGN
+                                            </Link>
+                                            {' >> '} <span style={{textTransform: 'uppercase'}} dangerouslySetInnerHTML={{ __html: item.title.rendered }}></span>
+                                            </div>
                                             <div className='section-header'>
                                                 <h1 dangerouslySetInnerHTML={{ __html: item.title.rendered }}></h1>
                                             </div>

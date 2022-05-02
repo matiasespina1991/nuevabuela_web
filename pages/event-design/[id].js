@@ -4,6 +4,7 @@ import NavHeaderSticky from '../../components/NavHeaderSticky'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link'
 
 
 export default function InteriorDesign(){
@@ -26,11 +27,6 @@ export default function InteriorDesign(){
         
     }, []);
 
-    useEffect(() => {
-        console.log(router)
-    }, [router])
-    
-
     return(
         <>
             <div className="main-section-container">
@@ -43,6 +39,12 @@ export default function InteriorDesign(){
                                 if(item.id.toString() == pathId){
                                     return(
                                         <div key={key}>
+                                            <div style={{marginBottom: '2.5rem'}} className="post-breadcrumb">
+                                            <Link href={'/event-design/'} prefetch={true} passHref className="btn btn-primary">
+                                            EVENT DESIGN
+                                            </Link>
+                                            {' >> '} <span style={{textTransform: 'uppercase'}} dangerouslySetInnerHTML={{ __html: item.title.rendered }}></span>
+                                            </div>
                                             <div className='section-header'>
                                                 <h1 dangerouslySetInnerHTML={{ __html: item.title.rendered }}></h1>
                                             </div>
