@@ -186,6 +186,10 @@ li {
   font-weight: 100;
 }
 
+.section-header.post-title h1{
+  font-size: 1.9rem;
+}
+
 .section-header-child--wrapper {
   min-width: 15rem;
   min-height: 4.5rem;
@@ -400,6 +404,10 @@ main {
 
 main.index {
   padding: 5rem 18%;
+}
+
+.post-breadcrumb * {
+  font-size: 0.9rem;
 }
 
 h1 {

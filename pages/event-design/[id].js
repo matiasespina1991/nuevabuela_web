@@ -5,14 +5,14 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link'
-
+import { cms_path } from '../api/cms_path';
 
 export default function InteriorDesign(){
     const [ wpData, setWpData ] = useState([])
     const router = useRouter();
     const pathId = router.query.id
 
-    const api_route = "http://nuevabuela.local/wp-json/wp/v2/event_design"
+    const api_route = `https://${cms_path}/wp-json/wp/v2/event_design/`
 
     useEffect(() => {
         const fetchData = async () => {
@@ -25,7 +25,7 @@ export default function InteriorDesign(){
         };
         fetchData();
         
-    }, []);
+    }, [api_route]);
 
     return(
         <>
@@ -41,11 +41,11 @@ export default function InteriorDesign(){
                                         <div key={key}>
                                             <div style={{marginBottom: '2.5rem'}} className="post-breadcrumb">
                                             <Link href={'/event-design/'} prefetch={true} passHref className="btn btn-primary">
-                                            EVENT DESIGN
+                                            <span style={{textDecoration: 'underline', cursor: 'pointer'}}>EVENT DESIGN</span>
                                             </Link>
                                             {' >> '} <span style={{textTransform: 'uppercase'}} dangerouslySetInnerHTML={{ __html: item.title.rendered }}></span>
                                             </div>
-                                            <div className='section-header'>
+                                            <div className='section-header post-title'>
                                                 <h1 dangerouslySetInnerHTML={{ __html: item.title.rendered }}></h1>
                                             </div>
                                             <div style={{marginBottom: '5rem'}} dangerouslySetInnerHTML={{ __html: item.content.rendered }} />
