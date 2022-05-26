@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@material/image-list": "^14.0.0",
+    "@mui/material": "^5.8.1",
     "axios": "^0.27.2",
     "gsap": "^3.8.0",
     "hamburger-react": "^2.4.1",

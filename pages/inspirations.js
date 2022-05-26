@@ -1,78 +1,78 @@
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+
 import Footer from '../components/footer'
 import NavHeader from '../components/NavHeader'
 import NavHeaderSticky from '../components/NavHeaderSticky'
-import Gallery from 'react-grid-gallery';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import { cms_path } from './api/cms_path';
+import demoInspirations from '../components/demo_data/demoInspirations'
 
-export default function interiorDesign(){
 
-    const IMAGES =
-[{
-    src: "/images/stock_examples/stock1.png",
-    thumbnail: "/images/stock_examples/stock1.png",
-    caption: ""
-},
-{
-    src: "/images/stock_examples/stock2.jpg",
-    thumbnail: "/images/stock_examples/stock2.jpg",
-    caption: ""
-},
+export default function Inspitations(){
+    const [ wpData, setWpData ] = useState([])
+    const [ inspirationImages, setInspirationImages ] = useState([])
 
-{
-    src: "/images/stock_examples/stock3.jpg",
-    thumbnail: "/images/stock_examples/stock3.jpg",
-    caption: ""
-},
-{
-    src: "/images/stock_examples/stock4.jpg",
-    thumbnail: "/images/stock_examples/stock4.jpg",
-    caption: "",
-},
-{
-    src: "/images/stock_examples/stock5.jpg",
-        thumbnail: "/images/stock_examples/stock5.jpg",
-        caption: ""
-},
-{
-    src: "/images/stock_examples/stock6.jpg",
-        thumbnail: "/images/stock_examples/stock6.jpg",
-        caption: ""
-},
-{
-    src: "/images/stock_examples/stock7.jpg",
-        thumbnail: "/images/stock_examples/stock7.jpg",
-        caption: ""
-},
-{
-    src: "/images/stock_examples/stock8.jpg",
-        thumbnail: "/images/stock_examples/stock8.jpg",
-        caption: ""
-},
-{
-    src: "/images/stock_examples/stock9.jpg",
-        thumbnail: "/images/stock_examples/stock9.jpg",
-        caption: ""
-},
-{
-    src: "/images/stock_examples/stock10.jpg",
-        thumbnail: "/images/stock_examples/stock10.jpg",
-        caption: ""
-},
-{
-    src: "/images/stock_examples/stock11.jpg",
-        thumbnail: "/images/stock_examples/stock11.jpg",
-        caption: ""
-},
-{
-    src: "/images/stock_examples/stock12.jpg",
-        thumbnail: "/images/stock_examples/stock12.jpg",
-        caption: ""
-},
-{
-    src: "/images/stock_examples/stock13.jpg",
-        thumbnail: "/images/stock_examples/stock13.jpg",
-        caption: ""
-}
-]
+    useEffect(() => {
+        const api_route = `https://${cms_path}/wp-json/wp/v2/inspirations`
+
+        const fetchData = async () => {
+            const result = await axios(
+                api_route,
+            );
+            const data = [result]
+            const trimmedData = data[0].data
+            setWpData(trimmedData)
+
+        };
+
+        fetchData();
+
+    }, []);
+
+    useEffect(()=>{
+        buildArrayOfInspirationImages(wpData)
+    },[wpData])
+
+
+    function buildArrayOfInspirationImages(wpInspirationImages){
+        const arrayOfObjects = []
+
+        wpInspirationImages.forEach((inspirationImage)=>{
+            const imageSrc = inspirationImage.better_featured_image.source_url
+            const rowsNum = inspirationImage.rows.length >= 1 ? parseInt(inspirationImage.rows) : 1
+            const columnsNum = inspirationImage.columns.length >= 1 ? parseInt(inspirationImage.columns) : 1
+            const inspirationTitle = inspirationImage.title.rendered
+
+            if(imageSrc){
+                arrayOfObjects.push(
+                    {
+                        img: imageSrc ,
+                        title: inspirationTitle ?? "",
+                        cols: columnsNum,
+                        rows: rowsNum
+                    }
+                )
+            }
+            setInspirationImages(arrayOfObjects)
+        })
+        
+    }
+
+    useEffect(()=>{
+        console.log(wpData)
+    },[wpData])
+
+
+function srcset(image, size, rows = 1, cols = 1) {
+    return {
+      src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
+      srcSet: `${image}?w=${size * cols}&h=${
+        size * rows
+      }&fit=crop&auto=format&dpr=2 2x`,
+    };
+  }
 
     return(
         <>
@@ -84,15 +84,31 @@ export default function interiorDesign(){
                         <h1>INSPIRATIONS</h1>
                     </div>
 
-                        <Gallery id="inspirations-gallery" margin="30px" rowHeight="360px" images={IMAGES}/>
-                    <style jsx>{`
-                        
-                    `}
-                    </style>
+
+
+                <ImageList
+                variant="quilted"
+                cols={4}
+                rowHeight={250}
+                gap={15}
+                >
+                {inspirationImages.map((item) => (
+                    <ImageListItem className="image-list-item" key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+                    <img
+                        {...srcset(item.img, 121, item.rows, item.cols)}
+                        alt={item.title}
+                        loading="lazy"
+                        style={{borderRadius: '20px'}}
+                    />
+                    </ImageListItem>
+                ))}
+                </ImageList>
+
+
+
                 </main>
                 <Footer />
             </div>
-            {/* <Footer /> */}
         </>
     )
 }

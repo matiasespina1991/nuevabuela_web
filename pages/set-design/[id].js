@@ -39,7 +39,7 @@ export default function InteriorDesign(){
                                 if(item.id.toString() == pathId){
                                     return(
                                         <div key={key}>
-                                            <div style={{marginBottom: '2.5rem'}} className="post-breadcrumb">
+                                            <div style={{marginBottom: '3.8rem'}} className="post-breadcrumb">
                                             <Link href={'/set-design/'} prefetch={true} passHref className="btn btn-primary">
                                             <span style={{textDecoration: 'underline', cursor: 'pointer'}}>SET DESIGN</span>
                                             </Link>

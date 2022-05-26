@@ -4,12 +4,12 @@ import NavHeaderSticky from '../components/NavHeaderSticky'
 import WpCarousel from '../components/WpCarousel';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-
+import { cms_path } from './api/cms_path';
 
 export default function SetDesign(){
     const [ wpData, setWpData ] = useState([])
 
-    const api_route = "http://nuevabuela.local/wp-json/wp/v2/set_design"
+    const api_route = `https://${cms_path}/wp-json/wp/v2/set_design`
 
     useEffect(() => {
         const fetchData = async () => {

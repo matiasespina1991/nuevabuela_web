@@ -4,12 +4,13 @@ import NavHeaderSticky from '../components/NavHeaderSticky'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import WpCarousel from '../components/WpCarousel';
+import { cms_path } from './api/cms_path';
 
 
 export default function InteriorDesign(){
     const [ wpData, setWpData ] = useState([])
 
-    const api_route = "http://nuevabuela.local/wp-json/wp/v2/interior_design"
+    const api_route = `https://${cms_path}/wp-json/wp/v2/interior_design`
 
     useEffect(() => {
         const fetchData = async () => {
