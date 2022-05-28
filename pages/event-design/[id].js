@@ -52,7 +52,11 @@ export default function InteriorDesign(){
                                             <div className='post-image-gallery'>
                                                     {item.gallery.map(
                                                         (image, key) => {
-                                                            return <img key={key} style={{width: '15rem', height: '15rem', objectFit: 'scale-down'}} src={image.guid} alt="" />
+                                                            return (
+                                                                <div style={{width: '15rem', height: '15rem'}} key={key} >
+                                                                    <img key={key} style={{borderRadius: '2.5rem', width: '100%'}} src={image.guid} alt="" />
+                                                                </div>
+                                                            )
                                                         }
                                                     )}
                                             </div>

@@ -157,7 +157,7 @@ li {
 .nuevabuela-logo {
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
   margin-top: 1rem;
 }
 
@@ -182,7 +182,7 @@ li {
 .section-header h1 {
   font-family: "Comforta-l";
   font-size: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 4.5rem;
   font-weight: 100;
 }
 
@@ -346,6 +346,8 @@ li {
 .post-image-gallery {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .rec-slider-container{
@@ -372,6 +374,12 @@ li {
   color: black;
   padding-top: 1.9rem;
   font-family: "Coco Gothic Light";
+}
+
+.contact-us-footer p.copied-phone-number {
+  font-size: 0.8rem;
+  padding-top: 0;
+  position: absolute;
 }
 
 .contact-us-footer strong {

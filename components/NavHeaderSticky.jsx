@@ -79,13 +79,14 @@ export default function NavHeader() {
             <style jsx>
                 {`
                 .sticky-header-logo--wrapper img {
-                    width: 3rem;
+                    width: 3.3rem;
                     padding: 0.1rem;
                 }
                 .sticky-header-logo--wrapper {
                     align-self: end;
                     position:absolute;
-                    left: 4.4rem;
+                    left: 4rem;
+                    transform: translateY(6px);
                 }
                 .navheader-sticky-wrapper {
                     position: fixed;
