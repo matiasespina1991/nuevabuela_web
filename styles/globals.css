@@ -350,9 +350,9 @@ li {
   gap: 1rem;
 }
 
-.rec-slider-container{
+/* .rec-slider-container{
   overflow: visible !important;
-}
+} */
 .rec-item-wrapper {
   overflow: visible !important;
 }

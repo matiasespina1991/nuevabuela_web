@@ -60,9 +60,6 @@ export default function Inspitations(){
         
     }
 
-    useEffect(()=>{
-        console.log(wpData)
-    },[wpData])
 
 
 function srcset(image, size, rows = 1, cols = 1) {

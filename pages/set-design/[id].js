@@ -27,13 +27,19 @@ export default function InteriorDesign(){
         
     }, [api_route]);
 
+    useEffect(()=>{
+        console.log(wpData)
+    },[wpData])
+
     return(
         <>
             <div className="main-section-container">
                 <NavHeader />
                 <NavHeaderSticky />
                 <main>
-                    {
+                    { 
+                        wpData 
+                        &&
                         wpData.map(
                             (item, key) => {
                                 if(item.id.toString() == pathId){
@@ -49,17 +55,22 @@ export default function InteriorDesign(){
                                                 <h1 dangerouslySetInnerHTML={{ __html: item.title.rendered }}></h1>
                                             </div>
                                             <div style={{marginBottom: '5rem'}} dangerouslySetInnerHTML={{ __html: item.content.rendered }} />
-                                            <div className='post-image-gallery'>
-                                                    {item.gallery.map(
-                                                        (image, key) => {
-                                                            return (
-                                                                <div style={{width: '15rem', height: '15rem'}} key={key} >
-                                                                    <img key={key} style={{borderRadius: '2.5rem', width: '100%'}} src={image.guid} alt="" />
-                                                                </div>
-                                                            )
-                                                        }
-                                                    )}
-                                            </div>
+                                            {
+                                                item.gallery != false
+                                                &&
+                                                <div className='post-image-gallery'>
+                                                        {item.gallery.map(
+                                                            (image, key) => {
+                                                                return (
+                                                                    <div style={{width: '15rem', height: '15rem'}} key={key} >
+                                                                        <img key={key} style={{borderRadius: '2.5rem', width: '100%'}} src={image.guid} alt="" />
+                                                                    </div>
+                                                                )
+                                                            }
+                                                        )}
+                                                </div>
+                                            }
+
                                         </div>
                                     )
                                 } else {

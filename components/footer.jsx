@@ -15,7 +15,6 @@ export default function Footer() {
       setCopied(false)
     }, 2000)
 
-    console.log(copied)
 
     return () => {
       clearTimeout(timeId)

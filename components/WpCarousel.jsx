@@ -5,7 +5,6 @@ import { useRouter } from 'next/router';
 export default function WpCarousel({wpData}){
     const placeholderSliders = [1,2,3];
     const router = useRouter()
-    console.log(useRouter())
 
     const backgroundImagesProps = {
         position: 'relative',
@@ -35,7 +34,6 @@ export default function WpCarousel({wpData}){
                     :
                     
                     wpData.map((slide,key) => {
-                        console.log(slide)
                         return(
                             <Link key={key} href={`${router.pathname}/${slide.id}`} prefetch={true} passHref className="btn btn-primary">
                                 <div key={slide.better_featured_image.source_url} className="wp-slide-image" style={{ ...backgroundImagesProps, backgroundImage: `url(${slide.better_featured_image.source_url})` }}>
