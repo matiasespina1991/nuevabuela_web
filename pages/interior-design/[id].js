@@ -37,6 +37,7 @@ export default function InteriorDesign(){
                         wpData.map(
                             (item, key) => {
                                 if(item.id.toString() == pathId){
+                                    console.log(item)
                                     return(
                                         <div key={key}>
                                             <div style={{marginBottom: '3.8rem'}} className="post-breadcrumb">
@@ -50,7 +51,7 @@ export default function InteriorDesign(){
                                             </div>
                                             <div style={{marginBottom: '5rem'}} dangerouslySetInnerHTML={{ __html: item.content.rendered }} />
                                             <div className='post-image-gallery'>
-                                                    {item.gallery.map(
+                                                    {item.gallery && item.gallery.map(
                                                         (image, key) => {
                                                             return (
                                                                 <div style={{width: '15rem', height: '20rem'}} key={key} >

@@ -70,8 +70,7 @@ export default function WpCarousel({wpData}){
                 .wp-slide--caption {
                     transition: 0.2s;
                     z-index: 1;
-                    text-align: justify;
-                    text-align: justify !important;
+                    text-align: center !important;
                     opacity: 0;
                     font-family: 'Comforta-l';
                     overflow: hidden;

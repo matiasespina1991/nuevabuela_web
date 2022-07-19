@@ -50,7 +50,7 @@ export default function InteriorDesign(){
                                             </div>
                                             <div style={{marginBottom: '5rem'}} dangerouslySetInnerHTML={{ __html: item.content.rendered }} />
                                             <div className='post-image-gallery'>
-                                                    {item.gallery.map(
+                                                    {item.gallery && item.gallery.map(
                                                         (image, key) => {
                                                             return (
                                                                 <div style={{width: '15rem', height: '15rem'}} key={key} >
