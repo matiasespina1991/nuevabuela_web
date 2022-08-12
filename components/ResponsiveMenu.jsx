@@ -29,12 +29,12 @@ export default function ResponsiveMenu() {
                 }
                 .responsive-menu--wrapper {
                     display: ${isOpen ? 'flex' : 'none'};
-                    height: 29rem;
+                    height: 31rem;
                     flex-direction: column;
                     justify-content: space-around;
                     width: 100%;
                     margin-left: 4rem;
-                    margin-top: 7rem;
+                    margin-top: 8rem;
                 }
             `}</style>
         </>

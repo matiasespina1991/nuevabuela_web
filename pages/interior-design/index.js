@@ -61,7 +61,7 @@ export default function InteriorDesign(){
                             text-align: center;
                             list-style-type: none;
                             padding-inline-start: 0;
-                            width: 28rem;
+                            width: 24rem;
                             margin-top: 2rem;
                         }
                         li {
