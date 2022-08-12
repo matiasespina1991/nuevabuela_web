@@ -1,6 +1,7 @@
 import Footer from '../../components/footer'
 import NavHeader from '../../components/NavHeader'
 import NavHeaderSticky from '../../components/NavHeaderSticky'
+import ResponsiveMenu from '../../components/ResponsiveMenu'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
@@ -32,6 +33,7 @@ export default function InteriorDesign(){
             <div className="main-section-container">
                 <NavHeader />
                 <NavHeaderSticky />
+                <ResponsiveMenu />
                 <main>
                     {
                         wpData.map(
@@ -54,7 +56,7 @@ export default function InteriorDesign(){
                                                     {item.gallery && item.gallery.map(
                                                         (image, key) => {
                                                             return (
-                                                                <div style={{width: '15rem', height: '20rem'}} key={key} >
+                                                                <div className='post-image-gallery-item-container'  style={{ height: '20rem'}} key={key} >
                                                                     <img key={key} style={{borderRadius: '2.5rem', width: '100%', height: '100%', objectFit: 'cover'}} src={image.guid} alt="" />
                                                                 </div>
                                                             )

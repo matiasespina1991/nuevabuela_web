@@ -1,6 +1,7 @@
-import Footer from '../components/footer'
-import NavHeader from '../components/NavHeader'
-import NavHeaderSticky from '../components/NavHeaderSticky'
+import Footer from '../../components/footer'
+import NavHeader from '../../components/NavHeader'
+import NavHeaderSticky from '../../components/NavHeaderSticky'
+import ResponsiveMenu from '../../components/ResponsiveMenu'
 
 export default function interiorDesign(){
 
@@ -9,6 +10,7 @@ export default function interiorDesign(){
             <div className="main-section-container">
                 <NavHeader />
                 <NavHeaderSticky />
+                <ResponsiveMenu />
                 <main>
                     <div className='section-header'>
                         <h1>CONTACT</h1>

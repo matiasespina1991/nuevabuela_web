@@ -1,16 +1,17 @@
-import Footer from '../components/footer'
-import NavHeader from '../components/NavHeader'
-import NavHeaderSticky from '../components/NavHeaderSticky'
+import Footer from '../../components/footer'
+import NavHeader from '../../components/NavHeader'
+import NavHeaderSticky from '../../components/NavHeaderSticky'
+import WpCarousel from '../../components/WpCarousel';
+import ResponsiveMenu from '../../components/ResponsiveMenu'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import WpCarousel from '../components/WpCarousel';
-import { cms_path } from './api/cms_path';
+import { cms_path } from '../api/cms_path';
 
 
-export default function InteriorDesign(){
+export default function EventDesign(){
     const [ wpData, setWpData ] = useState([])
 
-    const api_route = `https://${cms_path}/wp-json/wp/v2/interior_design`
+    const api_route = `https://${cms_path}/wp-json/wp/v2/event_design`
 
     useEffect(() => {
         const fetchData = async () => {
@@ -29,28 +30,25 @@ export default function InteriorDesign(){
             <div className="main-section-container">
                 <NavHeader />
                 <NavHeaderSticky />
-                <main>
+                <ResponsiveMenu />
+                <main className='main-responsive-margin-null'>
                     <div className='section-header'>
-                        <h1>INTERIOR DESIGN</h1>
+                        <h1>EVENT DESIGN</h1>
                     </div>
                     
 
                     <WpCarousel wpData={wpData}/>
 
-
                     <div className="sections-list--wrapper">
                         <ul>
                             <li>
-                                space planning
+                                private celebrations
                             </li>
                             <li>
-                                design consultation
+                                corporate events
                             </li>
                             <li>
-                                furniture selection
-                            </li>
-                            <li>
-                                art curation
+                                space setup & decoration
                             </li>
                         </ul>
                     </div>

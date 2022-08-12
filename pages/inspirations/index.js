@@ -1,13 +1,13 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-
-import Footer from '../components/footer'
-import NavHeader from '../components/NavHeader'
-import NavHeaderSticky from '../components/NavHeaderSticky'
+import ResponsiveMenu from '../../components/ResponsiveMenu'
+import Footer from '../../components/footer'
+import NavHeader from '../../components/NavHeader'
+import NavHeaderSticky from '../../components/NavHeaderSticky'
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import { cms_path } from './api/cms_path';
-import demoInspirations from '../components/demo_data/demoInspirations'
+import { cms_path } from '../api/cms_path';
+import demoInspirations from '../../components/demo_data/demoInspirations'
 
 
 export default function Inspitations(){
@@ -15,7 +15,7 @@ export default function Inspitations(){
     const [ inspirationImages, setInspirationImages ] = useState([])
 
     useEffect(() => {
-        const api_route = `https://${cms_path}/wp-json/wp/v2/inspirations`
+        const api_route = `https://${cms_path}/wp-json/wp/v2/inspirations/?per_page=50`
 
         const fetchData = async () => {
             const result = await axios(
@@ -76,7 +76,8 @@ function srcset(image, size, rows = 1, cols = 1) {
             <div className="main-section-container">
                 <NavHeader />
                 <NavHeaderSticky />
-                <main>
+                <ResponsiveMenu />
+                <main className='main-responsive-margin-medium'>
                     <div className='section-header'>
                         <h1>INSPIRATIONS</h1>
                     </div>
@@ -84,6 +85,7 @@ function srcset(image, size, rows = 1, cols = 1) {
 
 
                 <ImageList
+                className='inspirations-multi-image'
                 variant="quilted"
                 cols={4}
                 rowHeight={250}

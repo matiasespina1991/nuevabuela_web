@@ -1,15 +1,17 @@
-import Footer from '../components/footer'
-import NavHeader from '../components/NavHeader'
-import NavHeaderSticky from '../components/NavHeaderSticky'
-import WpCarousel from '../components/WpCarousel';
+import Footer from '../../components/footer'
+import NavHeader from '../../components/NavHeader'
+import NavHeaderSticky from '../../components/NavHeaderSticky'
+import ResponsiveMenu from '../../components/ResponsiveMenu'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { cms_path } from './api/cms_path';
+import WpCarousel from '../../components/WpCarousel';
+import { cms_path } from '../api/cms_path';
 
-export default function SetDesign(){
+
+export default function InteriorDesign(){
     const [ wpData, setWpData ] = useState([])
 
-    const api_route = `https://${cms_path}/wp-json/wp/v2/set_design`
+    const api_route = `https://${cms_path}/wp-json/wp/v2/interior_design`
 
     useEffect(() => {
         const fetchData = async () => {
@@ -23,31 +25,34 @@ export default function SetDesign(){
         fetchData();
     }, []);
 
-
     return(
         <>
             <div className="main-section-container">
                 <NavHeader />
                 <NavHeaderSticky />
-                <main>
+                <ResponsiveMenu />
+                <main className='main-responsive-margin-null'>
                     <div className='section-header'>
-                        <h1>SET DESIGN</h1>
+                        <h1>INTERIOR DESIGN</h1>
                     </div>
                     
 
-
                     <WpCarousel wpData={wpData}/>
+
 
                     <div className="sections-list--wrapper">
                         <ul>
                             <li>
-                                sets for shooting
+                                space planning
                             </li>
                             <li>
-                                art installations
+                                design consultation
                             </li>
                             <li>
-                                pop-ups
+                                furniture selection
+                            </li>
+                            <li>
+                                art curation
                             </li>
                         </ul>
                     </div>

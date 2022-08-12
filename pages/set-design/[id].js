@@ -1,6 +1,7 @@
 import Footer from '../../components/footer'
 import NavHeader from '../../components/NavHeader'
 import NavHeaderSticky from '../../components/NavHeaderSticky'
+import ResponsiveMenu from '../../components/ResponsiveMenu'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
@@ -27,15 +28,12 @@ export default function InteriorDesign(){
         
     }, [api_route]);
 
-    useEffect(()=>{
-        console.log(wpData)
-    },[wpData])
-
     return(
         <>
             <div className="main-section-container">
                 <NavHeader />
                 <NavHeaderSticky />
+                <ResponsiveMenu />
                 <main>
                     { 
                         wpData 
@@ -62,7 +60,7 @@ export default function InteriorDesign(){
                                                         {item.gallery.map(
                                                             (image, key) => {
                                                                 return (
-                                                                    <div style={{width: '15rem', height: '15rem'}} key={key} >
+                                                                    <div className='post-image-gallery-item-container' style={{width: '15rem', height: '15rem'}} key={key} >
                                                                         <img key={key} style={{borderRadius: '2.5rem', width: '100%'}} src={image.guid} alt="" />
                                                                     </div>
                                                                 )

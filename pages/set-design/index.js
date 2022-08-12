@@ -1,16 +1,16 @@
-import Footer from '../components/footer'
-import NavHeader from '../components/NavHeader'
-import NavHeaderSticky from '../components/NavHeaderSticky'
-import WpCarousel from '../components/WpCarousel';
+import Footer from '../../components/footer'
+import NavHeader from '../../components/NavHeader'
+import NavHeaderSticky from '../../components/NavHeaderSticky'
+import WpCarousel from '../../components/WpCarousel';
+import ResponsiveMenu from '../../components/ResponsiveMenu'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { cms_path } from './api/cms_path';
+import { cms_path } from '../api/cms_path';
 
-
-export default function EventDesign(){
+export default function SetDesign(){
     const [ wpData, setWpData ] = useState([])
 
-    const api_route = `https://${cms_path}/wp-json/wp/v2/event_design`
+    const api_route = `https://${cms_path}/wp-json/wp/v2/set_design`
 
     useEffect(() => {
         const fetchData = async () => {
@@ -24,29 +24,32 @@ export default function EventDesign(){
         fetchData();
     }, []);
 
+
     return(
         <>
             <div className="main-section-container">
                 <NavHeader />
                 <NavHeaderSticky />
-                <main>
+                <ResponsiveMenu />
+                <main className='main-responsive-margin-null'>
                     <div className='section-header'>
-                        <h1>EVENT DESIGN</h1>
+                        <h1>SET DESIGN</h1>
                     </div>
                     
+
 
                     <WpCarousel wpData={wpData}/>
 
                     <div className="sections-list--wrapper">
                         <ul>
                             <li>
-                                private celebrations
+                                sets for shooting
                             </li>
                             <li>
-                                corporate events
+                                art installations
                             </li>
                             <li>
-                                space setup & decoration
+                                pop-ups
                             </li>
                         </ul>
                     </div>
