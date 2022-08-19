@@ -31,59 +31,62 @@ export default function Footer() {
             <div className="space-block">
 
             </div>
-            <p>
-              <strong>Contact Us</strong> and schedule your consultation
-            </p>
-            <div className="footer-social-icons-container">
-              <SocialIcon target="_blank" url='https://www.instagram.com/nuevabuela/' className="social-icon" network="instagram" />
-              <SocialIcon target="_blank" url='https://www.pinterest.de/2bb635f563029bbec8497b05cac781/' className="social-icon" network="pinterest" />
-              <SocialIcon url="mailto:info@nuevabuela.com" className="social-icon" network="mailto" />
-              <SocialIcon url='/contact/' className="social-icon" network="whatsapp" />
-              {/* <Tooltip 
-              title={
-                <>
-                  <CopyToClipboard 
-                  text="+49(0)15127950874"
-                  onCopy={() => setCopied(true)}
-                  >
-                    <a style={{cursor: 'pointer'}} onClick="return false;">
-                        Copy
-                    </a>
-                  </CopyToClipboard>
-                </>
-              }
-              placement='top'
-              arrow
-              >
-                <Stack sx={{alignItems: 'center'}}>
-                  
-                  <SocialIcon 
-                  url='javascript:void(0)'
-                  className="social-icon" 
-                  network="whatsapp" 
-                  />
+            <div className='contact-wrapper'>
+              <p>
+                <strong>Contact Us</strong> and schedule your consultation
+              </p>
+              <div className="footer-social-icons-container">
+                <SocialIcon target="_blank" url='https://www.instagram.com/nuevabuela/' className="social-icon" network="instagram" />
+                <SocialIcon target="_blank" url='https://www.pinterest.de/2bb635f563029bbec8497b05cac781/' className="social-icon" network="pinterest" />
+                <SocialIcon url="mailto:info@nuevabuela.com" className="social-icon" network="mailto" />
+                <SocialIcon url='/contact/' className="social-icon" network="whatsapp" />
+                {/* <Tooltip 
+                title={
+                  <>
+                    <CopyToClipboard 
+                    text="+49(0)15127950874"
+                    onCopy={() => setCopied(true)}
+                    >
+                      <a style={{cursor: 'pointer'}} onClick="return false;">
+                          Copy
+                      </a>
+                    </CopyToClipboard>
+                  </>
+                }
+                placement='top'
+                arrow
+                >
+                  <Stack sx={{alignItems: 'center'}}>
+                    
+                    <SocialIcon 
+                    url='javascript:void(0)'
+                    className="social-icon" 
+                    network="whatsapp" 
+                    />
 
-                  <Tooltip
-                  open={copied}
-                  title='Phone number copied to clipboard!'
-                  placement='bottom'
-                  arrow
-                  >
-                    <button
-                    style={{
-                      marginTop: '-1.3rem',
-                      opacity: 0,
-                      zIndex: -1,
-                    }}
-                    >a</button>
-                  </Tooltip>
-                  
-                </Stack>
-              </Tooltip> */}
+                    <Tooltip
+                    open={copied}
+                    title='Phone number copied to clipboard!'
+                    placement='bottom'
+                    arrow
+                    >
+                      <button
+                      style={{
+                        marginTop: '-1.3rem',
+                        opacity: 0,
+                        zIndex: -1,
+                      }}
+                      >a</button>
+                    </Tooltip>
+                    
+                  </Stack>
+                </Tooltip> */}
 
-             
               
+                
+              </div>
             </div>
+            
           </div>
         </footer>
     )

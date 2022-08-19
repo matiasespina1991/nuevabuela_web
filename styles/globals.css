@@ -479,11 +479,15 @@ footer .space-block {
 
 @media (max-width: 800px) {
 
-  .responsive-nueva-abuela-logo-container{
-    display: block;
-    width: 3rem;
-    height: 3rem;
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 28rem;
+    justify-content: center;
+    margin-bottom: 9rem;
   }
+
+
 
   main{
     padding-top: 7rem;
@@ -560,6 +564,11 @@ footer .space-block {
 }
 
 @media (max-width: 500px) {
+  .responsive-nueva-abuela-logo-container{
+    display: block;
+    width: 3rem;
+    height: 3rem;
+  }
   main.index {
     padding: 4.2rem 8%;
   }
