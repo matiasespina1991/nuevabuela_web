@@ -278,6 +278,7 @@ li {
   background: url(/images/home-featured-left.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
 }
 
@@ -285,6 +286,7 @@ li {
   background: url(/images/home-featured-right.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
 }
 
