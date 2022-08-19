@@ -38,7 +38,8 @@ export default function Footer() {
               <SocialIcon target="_blank" url='https://www.instagram.com/nuevabuela/' className="social-icon" network="instagram" />
               <SocialIcon target="_blank" url='https://www.pinterest.de/2bb635f563029bbec8497b05cac781/' className="social-icon" network="pinterest" />
               <SocialIcon url="mailto:info@nuevabuela.com" className="social-icon" network="mailto" />
-              <Tooltip 
+              <SocialIcon url='/contact/' className="social-icon" network="whatsapp" />
+              {/* <Tooltip 
               title={
                 <>
                   <CopyToClipboard 
@@ -78,7 +79,7 @@ export default function Footer() {
                   </Tooltip>
                   
                 </Stack>
-              </Tooltip>
+              </Tooltip> */}
 
              
               

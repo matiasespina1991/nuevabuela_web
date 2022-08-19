@@ -2,6 +2,8 @@ import Footer from '../../components/footer'
 import NavHeader from '../../components/NavHeader'
 import NavHeaderSticky from '../../components/NavHeaderSticky'
 import ResponsiveMenu from '../../components/ResponsiveMenu'
+import { SocialIcon } from 'react-social-icons';
+import { Box } from '@mui/material';
 
 export default function interiorDesign(){
 
@@ -23,10 +25,10 @@ export default function interiorDesign(){
                                 <a className="contact-page-link" href="mailto:info@nuevabuela.com">info@nuevabuela.com</a>  
                             </li>
                             <li>
-                                Laura: <a className="contact-page-link" href="tel:+49(0)15127950874">+49 (0) 15127950874</a>  
+                            <Box sx={{display: 'inline'}}><SocialIcon style={{height: '1.4rem !important',width: '1.4rem !important',marginBottom: '0.3rem',marginLeft: '0.1rem'}} url='/contact/' className="social-icon" network="whatsapp" /></Box> Laura: <a className="contact-page-link" href="tel:+49(0)15127950874">+49 (0) 15127950874</a>  
                             </li>
                             <li>
-                                Sara: <a className="contact-page-link" href="tel:+49(0)17680104420">+49 (0) 17680104420</a>  
+                            <Box sx={{display: 'inline'}}><SocialIcon style={{height: '1.4rem !important',width: '1.4rem !important',marginBottom: '0.3rem',marginLeft: '0.1rem'}} url='/contact/' className="social-icon" network="whatsapp" /></Box>  Sara: <a className="contact-page-link" href="tel:+49(0)17680104420">+49 (0) 17680104420</a> 
                             </li>
                         </ul>
                     </div>
