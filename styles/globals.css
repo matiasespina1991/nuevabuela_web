@@ -568,6 +568,30 @@ footer .space-block {
 }
 
 @media (max-width: 500px) {
+
+  .wp-slide-image{
+    width: 19rem !important;
+  }
+
+  .rec-arrow-right, .rec-arrow-left {
+    z-index: 10;
+    position: absolute;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: unset  !important;
+  }
+
+  .rec-arrow-right {
+    right: 0;
+  }
+
+  .rec-arrow-right:hover, .rec-arrow-left:hover {
+    color: black !important;
+  }
+
+  .wp-slide-image {
+    box-shadow: unset !important;
+  }
   .responsive-nueva-abuela-logo-container{
     display: block;
     width: 3rem;
