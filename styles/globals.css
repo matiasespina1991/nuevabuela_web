@@ -365,6 +365,10 @@ li {
   overflow: visible !important;
 }
 
+.rec-slider-container {
+  min-height: 35rem;
+}
+
 .wp-slide--caption p {
   letter-spacing: 0.3px;
   line-height: 1.2rem;

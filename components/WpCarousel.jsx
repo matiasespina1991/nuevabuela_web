@@ -60,15 +60,15 @@ export default function WpCarousel({wpData}){
                     border-radius: 2.5rem;
                     height: 100%;
                     width: 100%;
-                    opacity: 0;
+                    opacity: 1;
                     background: linear-gradient(0deg, rgba(2,0,36,0.9073564425770308) 0%, rgba(0,0,0,0.07307072829131656) 60%);
                 }
                 .wp-slide-image:hover .wp-slide--overlay {
                     opacity: 1;
-                    filter: brightness(0.5);
+                    filter: brightness(0.8);
                 }
                 .wp-slide--caption {
-                    transition: 0.2s;
+                    transition: 0.6s;
                     z-index: 1;
                     text-align: center !important;
                     opacity: 0;
@@ -89,7 +89,8 @@ export default function WpCarousel({wpData}){
                     background-size: 22.5rem !important;
                 }
                 .wp-slide--proyect-title {
-                    opacity: 0;
+                    filter: brightness(1);
+                    opacity: 1;
                     text-align: center;
                     font-family: 'Comforta-l';
                     transition: 0.5s;
