@@ -103,6 +103,10 @@ li {
   box-sizing: border-box;
 }
 
+img {
+  transform: translateZ(0) scale(0.999999);
+}
+
 .hamburger-react {
   display: none;
 }
@@ -331,6 +335,52 @@ li {
 
 .sections-list--wrapper ul li {
   font-size: 1.4rem;
+}
+
+
+.modular {
+  z-index: 999;
+  position: fixed;
+  -webkit-transition: .1s;
+  transition: .1s;
+  backdrop-filter: blur(9px) saturate(1);
+  min-height: 100%;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: #0000008c!important;
+  overflow: hidden;
+  -webkit-filter: opacity(1);
+  filter: opacity(1);
+}
+
+.modular-image-container {
+  height: 100vh;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-content: center;
+  align-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+}
+
+.close-modular {
+  font-family: 'Comforta';
+  font-size: 3rem;
+  transform: scaleY(0.8);
+  cursor: pointer;
+  color: #fff;
+  font-size: 3rem;
+  text-align: right;
+  float: right;
+  padding-right: .8rem;
+  padding-top: .3rem;
+}
+
+
+.post-image-gallery-item-container{
+  cursor: pointer;
 }
 
 .ReactGridGallery_tile-viewport, .ReactGridGallery_tile-overlay{

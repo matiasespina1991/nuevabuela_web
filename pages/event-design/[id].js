@@ -10,6 +10,7 @@ import { cms_path } from '../api/cms_path';
 
 export default function InteriorDesign(){
     const [ wpData, setWpData ] = useState([])
+    const [ selectedImage, setSelectedImage] = useState()
     const router = useRouter();
     const pathId = router.query.id
 
@@ -55,13 +56,16 @@ export default function InteriorDesign(){
                                                     {item.gallery && item.gallery.map(
                                                         (image, key) => {
                                                             return (
-                                                                <div className='post-image-gallery-item-container' style={{height: '15rem'}} key={key} >
+                                                                <div className='post-image-gallery-item-container' 
+                                                                onClick={() => setSelectedImage(image.guid)} 
+                                                                style={{height: '15rem'}} key={key} >
                                                                     <img key={key} style={{borderRadius: '2.5rem', width: '100%'}} src={image.guid} alt="" />
                                                                 </div>
                                                             )
                                                         }
                                                     )}
                                             </div>
+                                            
                                         </div>
                                     )
                                 } else {
@@ -74,6 +78,16 @@ export default function InteriorDesign(){
 
                     `}
                     </style>
+                    {
+                        selectedImage && selectedImage != '' &&
+                        <div className="modular" onClick={() => setSelectedImage('')}>
+                        <div className="close-modular" onClick={() => setSelectedImage('')}>X</div>
+                        <div className="modular-image-container">
+                            <img className="modular-image" src={selectedImage} alt="" />
+                        </div>
+                    </div>
+                    }
+                    
                 </main>
                 <Footer />
             </div>
