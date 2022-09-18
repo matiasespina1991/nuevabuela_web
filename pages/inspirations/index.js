@@ -103,7 +103,15 @@ function srcset(image, size, rows = 1, cols = 1) {
                 ))}
                 </ImageList>
 
-
+                {
+                        selectedImage && selectedImage != '' &&
+                        <div className="modular" onClick={() => setSelectedImage('')}>
+                            <div className="close-modular" onClick={() => setSelectedImage('')}>X</div>
+                            <div className="modular-image-container">
+                                <img className="modular-image" src={selectedImage} alt="" />
+                            </div>
+                        </div>
+                    }
 
                 </main>
                 <Footer />
