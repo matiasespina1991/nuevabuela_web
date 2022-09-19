@@ -181,7 +181,7 @@ img {
 
 .responsive-menu--wrapper *{
   font-family: "Comforta-l";
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 .section-header--container {
@@ -365,6 +365,11 @@ img {
   padding: 1.5rem 0;
 }
 
+.modular-image {
+      width: 100%;
+      object-fit: contain;
+}
+
 .close-modular {
   font-family: 'Comforta';
   font-size: 3rem;
@@ -373,7 +378,8 @@ img {
   color: #fff;
   font-size: 3rem;
   text-align: right;
-  float: right;
+  position: absolute;
+  right: 0;
   padding-right: .8rem;
   padding-top: .3rem;
 }

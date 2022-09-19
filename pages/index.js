@@ -6,6 +6,7 @@ import NavHeader from "../components/NavHeader";
 import NavHeaderSticky from "../components/NavHeaderSticky";
 import Footer from '../components/footer'
 import ResponsiveMenu from '../components/ResponsiveMenu'
+import CookieConsent from "react-cookie-consent";
 
 export default function Home() {
   const [DOMisLoaded, setDOMisLoaded] = useState(false);
@@ -114,6 +115,7 @@ export default function Home() {
           
         </main>
         <Footer />
+        <CookieConsent buttonStyle={{backgroundColor: '#D29E06'}}>This website uses cookies to enhance the user experience.</CookieConsent>
       </div>
     </div>
   );

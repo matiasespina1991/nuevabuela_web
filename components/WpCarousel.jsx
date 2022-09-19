@@ -61,13 +61,13 @@ export default function WpCarousel({wpData}){
                     height: 100%;
                     width: 100%;
                     opacity: 1;
-                    background: linear-gradient(0deg, rgba(2,0,36,0.9073564425770308) 0%, rgba(0,0,0,0.07307072829131656) 60%);
                 }
                 .wp-slide-image:hover .wp-slide--overlay {
                     opacity: 1;
                     filter: brightness(0.8);
                 }
                 .wp-slide--caption {
+                    text-shadow: 1px 1px 9px #000000;
                     transition: 0.6s;
                     z-index: 1;
                     text-align: center !important;
@@ -89,16 +89,24 @@ export default function WpCarousel({wpData}){
                     background-size: 22.5rem !important;
                 }
                 .wp-slide--proyect-title {
+                    text-shadow: 0px 1px 11px #00000082;
                     filter: brightness(1);
                     opacity: 1;
                     text-align: center;
                     font-family: 'Comforta-l';
                     transition: 0.5s;
-                    color: #ffffff87;
+                    color: #ffffffba;
                     padding: 0 1rem;
                 }
                 .wp-slide-image:hover .wp-slide--proyect-title {
                     opacity: 1;
+                }
+
+                @media (max-width: 500px) {
+                    .wp-slide--caption {
+                        padding: 1rem;
+                        opacity: 1;
+                    }
                 }
             `}
             </style>

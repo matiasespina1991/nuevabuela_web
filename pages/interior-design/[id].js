@@ -78,11 +78,11 @@ export default function InteriorDesign(){
                     {
                         selectedImage && selectedImage != '' &&
                         <div className="modular" onClick={() => setSelectedImage('')}>
-                        <div className="close-modular" onClick={() => setSelectedImage('')}>X</div>
-                        <div className="modular-image-container">
-                            <img className="modular-image" src={selectedImage} alt="" />
+                            <div className="close-modular" onClick={() => setSelectedImage('')}>X</div>
+                            <div className="modular-image-container">
+                                <img className="modular-image" src={selectedImage} alt="" />
+                            </div>
                         </div>
-                    </div>
                     }
                 </main>
                 <Footer />
