@@ -1,10 +1,10 @@
-import {Squash as Hamburger} from 'hamburger-react'
+import { Squash as Hamburger } from 'hamburger-react'
 import { useState } from 'react'
 import Link from 'next/link';
 
 export default function ResponsiveMenu() {
     const [isOpen, setOpen] = useState(false)
-    return(
+    return (
         <>
             <Hamburger toggled={isOpen} toggle={setOpen} />
             <div className='responsive-nueva-abuela-logo-wrapper'>
@@ -18,6 +18,7 @@ export default function ResponsiveMenu() {
                     <Link href="/interior-design">INTERIOR DESIGN</Link>
                     <Link href="/set-design">SET DESIGN</Link>
                     <Link href="/event-design">EVENT DESIGN</Link>
+                    <Link href="/shop">SHOP</Link>
                     <Link href="/inspirations">INSPIRATIONS</Link>
                     <Link href="/contact">CONTACT</Link>
                 </div>

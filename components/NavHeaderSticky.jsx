@@ -63,6 +63,11 @@ export default function NavHeader() {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/shop" scroll={false}>
+                                    <a>Shop</a>
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/inspirations" scroll={false}>
                                     <a>Inspirations</a>
                                 </Link>
