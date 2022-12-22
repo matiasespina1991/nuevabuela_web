@@ -93,36 +93,32 @@ function srcset(image, size, rows = 1, cols = 1) {
                     </div>
 
 
-
-                <ImageList
-                className='inspirations-multi-image'
-                variant="quilted"
-                cols={4}
-                rowHeight={250}
-                gap={15}
-                >
-                {inspirationImages.map((item) => {
-                    console.log(item)
-                    
-                    return(
-                        <ImageListItem className="image-list-item" key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
-                            <div key={item.img} className="wp-slide-image" style={{ ...backgroundImagesProps, backgroundImage: `url(${item.img})` }}>
-                                <div className="wp-slide--overlay"></div>
-                                <h2 className="wp-slide--proyect-title" dangerouslySetInnerHTML={{__html: item.title}}></h2>
-                                <div className="wp-slide--caption" dangerouslySetInnerHTML={{__html: item.image_description}}></div>
-                            </div>
+                    <div className='Image-list-wrapper'>
+                        <ImageList
+                        className='inspirations-multi-image'
+                        variant="quilted"
+                        cols={4}
+                        rowHeight={250}
+                        gap={15}
+                        >
+                        {inspirationImages.map((item) => {
+                            // console.log(item)
                             
-                            {/* <img
-                                {...srcset(item.img, 121, item.rows, item.cols)}
-                                alt={item.title}
-                                loading="lazy"
-                                style={{borderRadius: '20px'}}
-                            /> */}
-                        </ImageListItem>
-                    )
-                })
-                }
-                </ImageList>
+                            return(
+                                
+                                    <ImageListItem className="image-list-item" key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+                                        <div key={item.img} className="wp-slide-image" style={{ ...backgroundImagesProps, backgroundImage: `url(${item.img})` }}>
+                                            <div className="wp-slide--overlay"></div>
+                                            <h2 className="wp-slide--proyect-title" dangerouslySetInnerHTML={{__html: item.title}}></h2>
+                                            <div className="wp-slide--caption" dangerouslySetInnerHTML={{__html: item.image_description}}></div>
+                                        </div>
+                                    </ImageListItem>
+                                
+                            )
+                        })
+                        }
+                        </ImageList>
+                    </div>
                 </main>
                 <Footer />
             </div>
@@ -168,6 +164,7 @@ function srcset(image, size, rows = 1, cols = 1) {
                     opacity: 1;
                 }
                 .wp-slide--proyect-title {
+                    line-height: 1.5rem;
                     text-shadow: 0px 1px 11px #00000082;
                     filter: brightness(1);
                     opacity: 1;
@@ -175,7 +172,6 @@ function srcset(image, size, rows = 1, cols = 1) {
                     font-family: 'Comforta-l';
                     transition: 0.5s;
                     color: #ffffffba;
-                    padding: 0 1rem;
                 }
                 .wp-slide-image:hover .wp-slide--proyect-title {
                     opacity: 1;

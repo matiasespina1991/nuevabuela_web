@@ -625,9 +625,9 @@ footer .space-block {
 
 @media (max-width: 500px) {
 
-  .wp-slide-image{
+  /* .wp-slide-image{
     width: 19rem !important;
-  }
+  } */
 
   .rec-arrow-right, .rec-arrow-left {
     z-index: 10;
