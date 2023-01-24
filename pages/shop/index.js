@@ -8,6 +8,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { cms_path } from '../api/cms_path';
 import demoInspirations from '../../components/demo_data/demoInspirations'
+import Link from 'next/link';
 
 export default function Shop(){
     const [ wpData, setWpData ] = useState([])
@@ -19,7 +20,6 @@ export default function Shop(){
         width: '100%',
         borderRadius: '2.5rem',
         transition: 'background-size 3s ease-out',
-        boxShadow: '5px 5px 13px #00000025',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
     }
@@ -89,7 +89,12 @@ function srcset(image, size, rows = 1, cols = 1) {
                 <ResponsiveMenu />
                 <main className='main-responsive-margin-medium'>
                     <div className='section-header'>
-                        <h1>SHOP</h1>
+                        <h1 style={{marginBottom: 0}}>SHOP</h1>
+                    </div>
+                    <div className='section-subheader'>
+                        <h2>Please get <Link href="/contact">
+                                    <a style={{color: 'blue', textDecoration: 'underline'}}>in touch</a>
+                                </Link> if you are interested in one of these pieces.</h2>
                     </div>
 
 

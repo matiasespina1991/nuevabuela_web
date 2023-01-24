@@ -248,6 +248,17 @@ img {
   letter-spacing: 0.2rem;
 }
 
+.section-subheader h2 {
+  font-family: "Comforta-l";
+  font-size: 1rem;
+  margin-bottom: 4.5rem;
+  font-weight: 100;
+}
+
+.section-subheader{
+  text-align: center;
+}
+
 .our-brand--wrapper,
 .about-us--wrapper {
   display: grid;
