@@ -89,11 +89,11 @@ function srcset(image, size, rows = 1, cols = 1) {
                 <ResponsiveMenu />
                 <main className='main-responsive-margin-medium'>
                     <div className='section-header'>
-                        <h1 style={{marginBottom: 0}}>SHOP</h1>
+                        <h1 style={{marginBottom: '1.5rem'}}>SHOP</h1>
                     </div>
                     <div className='section-subheader'>
-                        <h2>Please get <Link href="/contact">
-                                    <a style={{color: 'blue', textDecoration: 'underline'}}>in touch</a>
+                        <h2>Please <Link href="/contact">
+                                    <a style={{color: 'black', textDecoration: 'underline',fontWeight: 'bold'}}>get in touch</a>
                                 </Link> if you are interested in one of these pieces.</h2>
                     </div>
 
